@@ -1,14 +1,12 @@
+from exceptions import *
+import socket
+
+BUFFER_SIZE = 1024
+
 # The SocketHandler is the default query handler provided with the
 # Whois library. It performs the WHOIS query using a synchronous
 # socket connection.
 class SocketHandler(object):
-
-    # Array of connection errors to rescue
-    # and wrap into a {Whois::ConnectionError}
-    RESCUABLE_CONNECTION_ERRORS = [
-        SystemCallError,
-        SocketError,
-    ]
 
     def __init__(self):
         pass
@@ -24,10 +22,37 @@ class SocketHandler(object):
     def call(self, query, *args):
         try:
             self.execute(query, *args)
-        except RESCUABLE_CONNECTION_ERRORS, error:
-            raise ConnectionError("%s: %s") % (error, error.message)
+        except Excpetion, e:
+            raise ConnectionError("%s") % (e)
 
-      
+    # Executes the low-level Socket connection.
+    #
+    # It opens the socket passing given +args+,
+    # sends the +query+ and reads the response.
+    #
+    # @param  [String] query
+    # @param  [String] server
+    # @param  [String] port
+    # @return [String]
+    #
+    # @api private
+    #
+    def execute(self, query, server, port):
+        client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        try:
+            client.connect((server, port))
+            client.send(query+"\r\n")
+            buffer = ""
+            while True:
+                data = client.recv(BUFFER_SIZE)
+                if not data:
+                    break
+                buffer += data
+            return buffer
+        except:
+            client.close()
+
+        return None
 
 class Base(object):
 
@@ -48,9 +73,54 @@ class Base(object):
     #         The server hostname. Use nil if unknown or not available.
     # @param  [Hash] options Optional adapter properties.
     #
-    def __init__(self, whois_type, allocation, host, options = {})
+    def __init__(self, whois_type, allocation, host, options = {}):
         self.type       = whois_type
         self.allocation = allocation
         self.host       = host
         self.options    = options or {}
-    end
+
+    # Checks self and other for equality.
+    #
+    # @param  [The Whois::Server::Adapters::Base] other
+    # @return [Boolean] Returns true if the other is the same object,
+    #         or <tt>other</tt> attributes matches this object attributes.
+    #
+    def __eq__(self, other):
+
+        if self is other: 
+            return True
+
+        if type(other) == type(self) and other.type == self.type and \
+            other.allocation == self.allocation and other.host == self.host and \
+            other.options == self.options:
+            return True
+
+        return False
+
+    # Merges given +settings+ into current {#options}.
+    #
+    # @param  [dict] settings
+    # @return [dict] The updated options for this object.
+    #
+    def configure(self, settings):
+        self.host = settings.get('host') 
+        self.options.update(settings)
+        
+
+    # Performs a Whois lookup for <tt>string</tt>
+    # using the current server adapter.
+    #
+    # Internally, this method calls {#request}
+    # using the Template Method design pattern.
+    #
+    #   server.lookup("google.com")
+    #   # => Whois::Record
+    #
+    # @param  [String] string The string to be sent as query parameter.
+    # @return [Whois::Record]
+    #
+    def lookup(string):
+      buffer_start do |buffer|
+        request(string)
+        Whois::Record.new(self, buffer)
+      end
