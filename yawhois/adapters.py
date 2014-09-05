@@ -106,7 +106,6 @@ class Base(object):
         self.host = settings.get('host') 
         self.options.update(settings)
         
-
     # Performs a Whois lookup for <tt>string</tt>
     # using the current server adapter.
     #
@@ -119,8 +118,22 @@ class Base(object):
     # @param  [String] string The string to be sent as query parameter.
     # @return [Whois::Record]
     #
-    def lookup(string):
-      buffer_start do |buffer|
-        request(string)
-        Whois::Record.new(self, buffer)
-      end
+    def lookup(self, string):
+        self.reset_buffer()
+        self.request(string)
+        return Record(self, buffer)
+
+
+    def reset_buffer(self):
+        self.buffer = []
+
+    # Store a record part in buffer
+    #
+    # @param [String] body
+    # @param [String] host
+    #
+    def append_buffer(self, body, host):
+        self.buffer.append(record.Part(body, host))
+
+
+
