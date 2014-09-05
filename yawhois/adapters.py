@@ -1,12 +1,20 @@
 from exceptions import *
+from .record import Part, Record
 import socket
+import re
 
 BUFFER_SIZE = 1024
+DEFAULT_WHOIS_PORT = 43
+DEFAULT_BIND_HOST = "0.0.0.0"
 
-# The SocketHandler is the default query handler provided with the
-# Whois library. It performs the WHOIS query using a synchronous
-# socket connection.
+
 class SocketHandler(object):
+    '''
+    The SocketHandler is the default query handler provided with the
+    Whois library. It performs the WHOIS query using a synchronous
+    socket connection.
+    '''
+
 
     def __init__(self):
         pass
@@ -19,9 +27,9 @@ class SocketHandler(object):
     # @param  [Array] args
     # @return [String]
     #
-    def call(self, query, *args):
+    def call(self, query, server, port):
         try:
-            self.execute(query, *args)
+            return self.execute(query, server, port)
         except Excpetion, e:
             raise ConnectionError("%s") % (e)
 
@@ -49,12 +57,13 @@ class SocketHandler(object):
                     break
                 buffer += data
             return buffer
-        except:
+        except Exception, e:
+            print e
             client.close()
 
         return None
 
-class Base(object):
+class BaseAdapter(object):
 
     # Default WHOIS request port.
     DEFAULT_WHOIS_PORT = 43
@@ -62,7 +71,7 @@ class Base(object):
     # Default bind hostname.
     DEFAULT_BIND_HOST = "0.0.0.0"
 
-    _query_handler = socket.socket()
+    __query_handler = SocketHandler()
 
     # @param  [Symbol] whois_type
     #         The type of WHOIS adapter to define.
@@ -78,6 +87,7 @@ class Base(object):
         self.allocation = allocation
         self.host       = host
         self.options    = options or {}
+        self.__buffer   = None
 
     # Checks self and other for equality.
     #
@@ -103,7 +113,8 @@ class Base(object):
     # @return [dict] The updated options for this object.
     #
     def configure(self, settings):
-        self.host = settings.get('host') 
+        if settings.has_key('host'):
+            self.host = settings.get('host') 
         self.options.update(settings)
         
     # Performs a Whois lookup for <tt>string</tt>
@@ -121,11 +132,10 @@ class Base(object):
     def lookup(self, string):
         self.reset_buffer()
         self.request(string)
-        return Record(self, buffer)
-
+        return Record(self, self.__buffer)
 
     def reset_buffer(self):
-        self.buffer = []
+        self.__buffer = []
 
     # Store a record part in buffer
     #
@@ -133,7 +143,40 @@ class Base(object):
     # @param [String] host
     #
     def append_buffer(self, body, host):
-        self.buffer.append(record.Part(body, host))
+        self.__buffer.append(Part(body, host))
 
+    def request(self):
+        raise NotImplementedError
 
+    def query(self, query, host, port = None):
+        port = port or self.options.get('port') or DEFAULT_WHOIS_PORT
+        return self.__query_handler.call(query, host, port)
 
+class VerisignAdapter(BaseAdapter):
+
+    WHOIS_SERVER_PATTERN = re.compile("Whois Server: (.+?)$")
+
+    def __init__(self, *args):
+        super(VerisignAdapter, self).__init__(*args)
+
+    def request(self, string):
+        response = self.query("=" + string, self.host)
+        self.append_buffer(response, self.host)
+
+        referral = self.extract_referral(response)
+
+        if self.options.get('referral') != False and referral is not None:
+            response = self.query(string, referral)
+            self.append_buffer(response, referral)
+
+    def extract_referral(self, response):
+        if "Domain Name:" in response:
+            server = self.WHOIS_SERVER_PATTERN.findall(response)
+            if server:
+                server = server[-1].strip()
+                if server == "not defined":
+                    return None
+
+                return server
+
+        return None

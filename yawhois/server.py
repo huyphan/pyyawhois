@@ -77,7 +77,7 @@ class Server(object):
     def factory(def_type, allocation, host, options = {}):
         adapter = options.get('adapter') or adapters.Standard
         if not callable(adapter):
-            adapter = getattr(adapters, camelize(adapter))
+            adapter = getattr(adapters, camelize(adapter) + "Adapter")
         return adapter(def_type, allocation, host, options)
 
 Server.load_definitions()

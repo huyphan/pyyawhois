@@ -33,7 +33,7 @@ def is_valid_ipv6(addr):
     return False
 
 def camelize(string):
-    "".join([s.capitalize() for s in string.split("_")])
+    return "".join([s.capitalize() for s in string.split("_")])
 
 def matches_tld(string):
     return re.compile("^\.(xn--)?[a-z0-9]+$").match(string)
