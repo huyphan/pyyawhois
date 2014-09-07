@@ -8,6 +8,20 @@ class Part(object):
 
 class Record(object):
 
+    METHODS = [
+        'contacts', 'is_changed'
+    ]
+
+    PROPERTIES = [
+        'disclaimer',
+        'domain', 'domain_id',
+        'status', 'available', 'registered',
+        'created_on', 'updated_on', 'expires_on',
+        'registrar',
+        'registrant_contacts', 'admin_contacts', 'technical_contacts',
+        'nameservers'
+    ]
+
     # Initializes a new instance with given server and parts
     #
     # @param [Server] server
@@ -16,39 +30,47 @@ class Record(object):
     def __init__(self, server, parts):
         self.server = server
         self.parts  = parts
-        self.__parser = None      
+        self.__parsers = None
 
     def __str__(self):
         return self.content
+
+    def __getattr__(self, attr):
+        if attr in self.PROPERTIES or attr in self.METHODS:
+            for parser in self.parsers:
+                if parser.is_supporting_property(attr):
+                    return getattr(parser, attr)
+
+        return None
+
+    @property
+    def parsers(self):
+        if self.__parsers is None:
+            self.__parsers = [ParserFactory.parser_for(part) for part in self.parts[::-1]]
+
+        return self.__parsers
 
     @property
     def content(self):
         return "\n".join([part.body for part in self.parts])
 
     @property
-    def parser(self):
-        if self.__parser == None:
-            self.__parser = Parser()
-
-        return self.__parser
-
-    def is_supporting_property(self, prop):
-        return self.parser.is_supporting_property(prop)
-
-    @property
     def registrant_contact(self):
-        if self.is_supporting_property('registrant_contacts'):
-            return self.parser.registrant_contacts[0]
+        for parser in self.parsers:
+            if parser.is_property_supported("registrant_contacts"):
+                return parser.registrant_contacts[0]
 
     @property
     def admin_contact(self):
-        if self.is_supporting_property('admin_contacts'):
-            return self.parser.admin_contacts[0]
+        for parser in self.parsers:
+            if parser.is_property_supported("admin_contacts"):
+                return parser.admin_contacts[0]
 
     @property
     def technical_contact(self):
-        if self.is_supporting_property('technical_contacts'):
-            return self.parser.technical_contacts[0]
+        for parser in self.parsers:
+            if parser.is_property_supported("technical_contacts"):
+                return parser.technical_contacts[0]
 
     # Returns a Hash containing all supported properties for this record
     # along with corresponding values.
@@ -59,8 +81,8 @@ class Record(object):
     def properties(self):
         props = {}
 
-        for prop in Parser.PROPERTIES:
-            if self.is_supporting_property(prop):
+        for prop in Record.PROPERTIES:
+            if self.is_property_supported(prop):
                 props[prop] = self.prop
 
         return props
@@ -73,6 +95,9 @@ class Record(object):
     @property   
     def contacts(self):
         return self.parser.contacts
+
+    def is_property_supported(self, prop):
+        return any(parser.is_property_supported(prop) for parser in self.parsers)
 
     # Checks whether this is an incomplete response.
     #

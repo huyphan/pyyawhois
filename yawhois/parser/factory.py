@@ -1,20 +1,8 @@
 import re
+import sys
+from ..exceptions import ParserNotFound
 
 class ParserFactory(object):
-
-    METHODS = [
-        'contacts', 'is_changed'
-    ]
-
-    PROPERTIES = [
-        'disclaimer',
-        'domain', 'domain_id',
-        'status', 'available', 'registered',
-        'created_on', 'updated_on', 'expires_on',
-        'registrar',
-        'registrant_contacts', 'admin_contacts', 'technical_contacts',
-        'nameservers'
-    ]
 
     # Returns the proper parser instance for given <tt>part</tt>.
     # The parser class is selected according to the
@@ -36,12 +24,14 @@ class ParserFactory(object):
     #   Parser.parser_for("missing.example.com")
     #   # => #<Whois::Record::Parser::Blank>
     #
-    @classmethod
+    @staticmethod
     def parser_for(part):
         try:
-            Parser.parser_class(part.host)(part)
+            return ParserFactory.parser_class(part.host)(part)
         except Exception, e:
-            return Blank(part)
+            print e
+            module = __import__('blank', globals())
+            return getattr(module, 'Blank')(part)
 
     # Detects the proper parser class according to given <tt>host</tt>
     # and returns the class constant.
@@ -64,17 +54,19 @@ class ParserFactory(object):
     #   Parser.parser_klass("whois.example.com")
     #   # => Whois::Record::Parser::WhoisExampleCom
     #
-    @classmethod
+    @staticmethod
     def parser_class(host):
-        name = Parser.host_to_parser(host)
-        return getattr(".parser", name)
+        module_name, class_name = ParserFactory.host_to_parser(host)
+        module = getattr(__import__("", globals(), fromlist=["parser"]), module_name)
+        return getattr(module, class_name)
 
-    @classmethod
+    @staticmethod
     def host_to_parser(host):
         host = host.lower()
-        host = re.sub(r'[.-]', '_', host)
-        host = re.sub(r"(?:^|_)(.)", lambda x: x.group(0)[-1].upper(), host)
-        return host
+        module_name = re.sub(r'[.-]', '_', host)
+        class_name = re.sub(r"(?:^|_)(.)", lambda x: x.group(0)[-1].upper(), module_name)
+
+        return module_name, class_name
 
     def __init__(self, record):
         self.record    = record
