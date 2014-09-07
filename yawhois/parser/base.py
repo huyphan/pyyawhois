@@ -21,3 +21,4 @@ class ParserBase(object):
             if self.is_property_supported(c):
                 contacts.append(getattr(self, c))
         return contacts
+
