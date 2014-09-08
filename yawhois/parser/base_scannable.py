@@ -19,7 +19,6 @@ class ScannableParserBase(ParserBase):
     # => "2009-12-12"
     '''
 
-
     __scanner = None
     __ast     = None
 
