@@ -1,4 +1,5 @@
 from ..exceptions import ParserError
+import re
 
 class StringScanner(object):
 
@@ -7,23 +8,33 @@ class StringScanner(object):
         self.__offset  = 0
         self.results   = []
 
+    @property
+    def buffer(self):
+        return buffer(self.__input, self.__offset)
+
     def eos(self):
-        return self.__offset == len(self.__input)
+        return self.__offset >= len(self.__input)
 
+    def _search(self, pattern, flags = 0):
+        pattern = re.compile(pattern, flags)
+        match = pattern.search(self.buffer)
+        return match
+
+    def _search_from_start(self, pattern, flags = 0):
+        return self._search("\A" + pattern, flags)
+
+    def match(self, pattern, flags = 0):
+        match = self._search_from_start(pattern, flags)
+        if match is not None:
+            return len(match.group())
+      
     def skip(self, pattern, flags = 0):
-        if isinstance(pattern, basestring):
-            pattern = re.compile(pattern, flags)
-
-        match = pattern.match(self.__input, self.__offset)
-
+        match = self._search_from_start(pattern, flags)
         if match is not None:
             self.offset = match.end()
 
     def scan(self, pattern, flags = 0):
-        if isinstance(pattern, basestring):
-            pattern = re.compile(pattern, flags)
-
-        match = pattern.match(self.__input, self.__offset)
+        match = self._search_from_start(pattern, flags)
 
         if match is not None:
             self.offset  = match.end()
@@ -31,10 +42,44 @@ class StringScanner(object):
             
             return True
 
+        self.results = []
+        return False
+
+    def skip_until(self, pattern, flags = 0):
+        match = self._search(pattern, flags)
+        if match is not None:
+            self.__offset += match.end()
+            return match.end()
+
+        return None
+
+    def check_until(self, pattern, flags = 0):
+        match = self._search(pattern, flags)
+
+        if match is not None:
+            self.results = [self.__input[self.__offset:self.__offset + match.end()]]
+            return True
+        
+        self.results = []
+        return False
+
+    def scan_until(self, pattern, flags = 0):
+        if self.check_until(pattern, flags):
+            self.__offset += len(self.results)
+            return True
+
         return False
 
     def remaining(self):
         return self.__input[self.__offset:]
+
+    def terminate(self):
+        self.__offset = len(self.__input)
+        self.results  = []
+
+    @property
+    def pos(self):
+        return self.__offset
 
 class ScannerBase(object):
 
