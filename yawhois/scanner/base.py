@@ -4,16 +4,16 @@ import re
 class StringScanner(object):
 
     def __init__(self, string):
-        self.__input   = string
-        self.__offset  = 0
+        self._input   = string
+        self._offset  = 0
         self.results   = []
 
     @property
     def buffer(self):
-        return buffer(self.__input, self.__offset)
+        return buffer(self._input, self._offset)
 
     def eos(self):
-        return self.__offset >= len(self.__input)
+        return self._offset >= len(self._input)
 
     def _search(self, pattern, flags = 0):
         pattern = re.compile(pattern, flags)
@@ -31,13 +31,15 @@ class StringScanner(object):
     def skip(self, pattern, flags = 0):
         match = self._search_from_start(pattern, flags)
         if match is not None:
-            self.offset = match.end()
+            old_offset    = self._offset
+            self._offset = match.end()
+            return self._offset - old_offset
 
     def scan(self, pattern, flags = 0):
         match = self._search_from_start(pattern, flags)
 
         if match is not None:
-            self.offset  = match.end()
+            self._offset  = match.end()
             self.results = (match.group(),) + match.groups()
             
             return True
@@ -48,7 +50,7 @@ class StringScanner(object):
     def skip_until(self, pattern, flags = 0):
         match = self._search(pattern, flags)
         if match is not None:
-            self.__offset += match.end()
+            self._offset += match.end()
             return match.end()
 
         return None
@@ -57,7 +59,7 @@ class StringScanner(object):
         match = self._search(pattern, flags)
 
         if match is not None:
-            self.results = [self.__input[self.__offset:self.__offset + match.end()]]
+            self.results = [self._input[self._offset:self._offset + match.end()]]
             return True
         
         self.results = []
@@ -65,51 +67,51 @@ class StringScanner(object):
 
     def scan_until(self, pattern, flags = 0):
         if self.check_until(pattern, flags):
-            self.__offset += len(self.results)
+            self._offset += len(self.results)
             return True
 
         return False
 
     def remaining(self):
-        return self.__input[self.__offset:]
+        return self._input[self._offset:]
 
     def terminate(self):
-        self.__offset = len(self.__input)
+        self._offset = len(self._input)
         self.results  = []
 
     @property
     def pos(self):
-        return self.__offset
+        return self._offset
 
 class ScannerBase(object):
 
-    __tokenizer = []
+    _tokenizer = []
 
     def __init__(self, settings = None):
         self.settings = settings or {}
 
-    def parse(content):
+    def parse(self, content):
         self.__tmp = {}
         self.__ast = {}
         
-        self.__input  = StringScanner(content)
-        self.__offset = 0
+        self._input  = StringScanner(content)
+        self._offset = 0
 
-        while not self.__input.eos():
+        while not self._input.eos():
             self.tokenize()
 
     def skip_empty_line(self):
-        self.__input.skip("^\n")
+        return self._input.skip("^\n")
 
     def skip_blank_line(self):
-        self.__input.skip("^[\s]*\n")
+        self._input.skip("^[\s]*\n")
 
     def skip_new_line(self):
-        self.__input.skip("\n")
+        self._input.skip("\n")
 
     def scan_keyvalue(self):
-        if self.__input.scan("(.+?):(.*?)(\n|\z)"):
-            key, value = self.__input.results[1], self.__input.results[2]
+        if self._input.scan("(.+?):(.*?)(\n|\z)"):
+            key, value = self._input.results[1], self._input.results[2]
 
             if self.__tmp.get("_section"):
                 target = self.__ast[self.__tmp.get("_section")] or {}
@@ -125,21 +127,21 @@ class ScannerBase(object):
 
     def __scan_lines_to_array(self, pattern):
         results = []
-        while self.__input.scan(pattern):
-            results.append(self.__input.results[1].strip())
+        while self._input.scan(pattern):
+            results.append(self._input.results[1].strip())
         return results
 
     def __scan_lines_to_hash(self, pattern):
         results = []
-        while self.__input.scan(pattern):
-            key, value = self.__input.results[1], self.__input.results[2]
+        while self._input.scan(pattern):
+            key, value = self._input.results[1], self._input.results[2]
             results[key.strip()] = value.strip()
         return results
 
     def _scan_keyvalues(self, pattern):
         results = []
-        if self.__input.scan("(.+?):(.*?)(\n|\z)"):
-            key, value = self.__input.results[1], self.__input.results[2]
+        if self._input.scan("(.+?):(.*?)(\n|\z)"):
+            key, value = self._input.results[1], self._input.results[2]
                 
             if not results.has_key(key):
                 results[key] = value
@@ -149,11 +151,13 @@ class ScannerBase(object):
                 results[key] = [results[key], value]
         return results
         
-    def tokenize():
-        for tokenizer in self.__tokenizer:
-            if getattr(self, tokenize):
-                return
+    def tokenize(self):
+        for tokenizer in self._tokenizer:
+            if hasattr(self, tokenizer):
+                if getattr(self, tokenizer)():
+                    return
+
         self.error("Unexpected token")
 
     def error(self, message):
-        raise ParserError("%s: %s" % (message, self.__input.remaining()))
+        raise ParserError("%s: %s" % (message, self._input.remaining()))

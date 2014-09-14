@@ -38,7 +38,7 @@ class Record(object):
     def __getattr__(self, attr):
         if attr in self.PROPERTIES or attr in self.METHODS:
             for parser in self.parsers:
-                if parser.is_supporting_property(attr):
+                if parser.is_property_supported(attr):
                     return getattr(parser, attr)
 
         return None

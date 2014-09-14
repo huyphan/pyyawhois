@@ -1,5 +1,5 @@
 from .base import ParserBase
-from .base_verisign import VerisignBase
+from .base_verisign import VerisignParserBase
 
-class WhoisVerisignGrsCom(VerisignBase):
+class WhoisVerisignGrsCom(VerisignParserBase):
     pass

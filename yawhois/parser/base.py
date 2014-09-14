@@ -1,9 +1,5 @@
 class ParserBase(object):
     
-    PROPERTY_STATE_NOT_IMPLEMENTED = 'not_implemented'
-    PROPERTY_STATE_NOT_SUPPORTED   = 'not_supported'
-    PROPERTY_STATE_SUPPORTED       = 'supported'
-
     __properties = {}
 
     def __init__(self, part):
@@ -12,7 +8,15 @@ class ParserBase(object):
 
     @classmethod
     def is_property_supported(self, prop):
-        return self.__properties.get(prop) == ParserBase.PROPERTY_STATE_SUPPORTED
+        return hasattr(self, prop)
+
+    @property
+    def content(self):
+        return self.__part.body
+        
+    @property
+    def content_for_scanner(self):
+        return self.content.replace("\r\n", "\n")
 
     @property
     def contacts(self):

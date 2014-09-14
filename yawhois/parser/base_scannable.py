@@ -19,18 +19,18 @@ class ScannableParserBase(ParserBase):
     # => "2009-12-12"
     '''
 
-    __scanner = None
-    __ast     = None
+    _scanner = None
+    __ast    = None
 
     def node(self, key):
         return self.ast[key]
 
     def parse(self):
-        if type(self.__scanner) == list:
-            scanner  = self.__scanner[0]
-            settings = self.__scanner[-1]
+        if type(self._scanner) == list:
+            scanner  = self._scanner[0]
+            settings = self._scanner[-1]
         else:
-            scanner  = self.__scanner
+            scanner  = self._scanner
             settings = {}
 
         return scanner(settings).parse(self.content_for_scanner)
