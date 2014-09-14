@@ -1,2 +1,4 @@
-from .factory import ParserFactory
-import whois_verisign_grs_com
+__all__ = [
+    "whois_verisign_grs_com",
+    "whois_markmonitor_com",
+]

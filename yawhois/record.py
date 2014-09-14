@@ -1,3 +1,4 @@
+from .parser.factory import ParserFactory
 from .parser import *
 
 class Part(object):
@@ -5,6 +6,14 @@ class Part(object):
     def __init__(self, body, host):
         self.body = body
         self.host = host
+
+class Registrar(object):
+
+    def __init__(self, id_, name, organization, url):
+        self.id   = id_
+        self.name = name
+        self.organization = organization
+        self.url  = url
 
 class Record(object):
 
@@ -46,8 +55,7 @@ class Record(object):
     @property
     def parsers(self):
         if self.__parsers is None:
-            self.__parsers = [ParserFactory.parser_for(part) for part in self.parts[::-1]]
-
+            self.__parsers = [ParserFactory.parser_for(part) for part in self.parts[::-1]]            
         return self.__parsers
 
     @property

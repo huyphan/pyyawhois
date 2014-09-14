@@ -17,7 +17,7 @@ class StringScanner(object):
 
     def _search(self, pattern, flags = 0):
         pattern = re.compile(pattern, flags)
-        match = pattern.search(self.buffer)
+        match   = pattern.search(self.buffer)
         return match
 
     def _search_from_start(self, pattern, flags = 0):
@@ -32,15 +32,15 @@ class StringScanner(object):
         match = self._search_from_start(pattern, flags)
         if match is not None:
             old_offset    = self._offset
-            self._offset = match.end()
+            self._offset += match.end()
             return self._offset - old_offset
 
     def scan(self, pattern, flags = 0):
         match = self._search_from_start(pattern, flags)
 
         if match is not None:
-            self._offset  = match.end()
-            self.results = (match.group(),) + match.groups()
+            self._offset += match.end()
+            self.results  = (match.group(),) + match.groups()
             
             return True
 
@@ -88,11 +88,11 @@ class ScannerBase(object):
     _tokenizer = []
 
     def __init__(self, settings = None):
-        self.settings = settings or {}
+        self._settings = settings or {}
 
     def parse(self, content):
-        self.__tmp = {}
-        self.__ast = {}
+        self._tmp = {}
+        self._ast = {}
         
         self._input  = StringScanner(content)
         self._offset = 0
@@ -100,23 +100,25 @@ class ScannerBase(object):
         while not self._input.eos():
             self.tokenize()
 
+        return self._ast
+
     def skip_empty_line(self):
         return self._input.skip("^\n")
 
     def skip_blank_line(self):
-        self._input.skip("^[\s]*\n")
+        return self._input.skip("^[\s]*\n")
 
     def skip_new_line(self):
-        self._input.skip("\n")
+        return self._input.skip("\n")
 
     def scan_keyvalue(self):
         if self._input.scan("(.+?):(.*?)(\n|\z)"):
             key, value = self._input.results[1], self._input.results[2]
 
-            if self.__tmp.get("_section"):
-                target = self.__ast[self.__tmp.get("_section")] or {}
+            if self._tmp.get("_section"):
+                target = self._ast[self._tmp.get("_section")] or {}
             else:
-                target = self.__ast
+                target = self._ast
                 
             if not target.has_key(key):
                 target[key] = value
@@ -124,6 +126,8 @@ class ScannerBase(object):
                 target[key].append(value)
             else:
                 target[key] = [target[key], value]
+
+            return True
 
     def __scan_lines_to_array(self, pattern):
         results = []
@@ -142,7 +146,6 @@ class ScannerBase(object):
         results = []
         if self._input.scan("(.+?):(.*?)(\n|\z)"):
             key, value = self._input.results[1], self._input.results[2]
-                
             if not results.has_key(key):
                 results[key] = value
             elif isinstance(results[key], list):
@@ -154,7 +157,9 @@ class ScannerBase(object):
     def tokenize(self):
         for tokenizer in self._tokenizer:
             if hasattr(self, tokenizer):
-                if getattr(self, tokenizer)():
+                r = getattr(self, tokenizer)()
+                # print tokenizer, r
+                if r:
                     return
 
         self.error("Unexpected token")

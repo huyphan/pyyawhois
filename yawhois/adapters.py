@@ -154,7 +154,7 @@ class BaseAdapter(object):
 
 class VerisignAdapter(BaseAdapter):
 
-    WHOIS_SERVER_PATTERN = re.compile("Whois Server: (.+?)$")
+    WHOIS_SERVER_PATTERN = re.compile("Whois Server: (.+?)$", re.M)
 
     def __init__(self, *args):
         super(VerisignAdapter, self).__init__(*args)
@@ -164,7 +164,6 @@ class VerisignAdapter(BaseAdapter):
         self.append_buffer(response, self.host)
 
         referral = self.extract_referral(response)
-
         if self.options.get('referral') != False and referral is not None:
             response = self.query(string, referral)
             self.append_buffer(response, referral)

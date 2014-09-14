@@ -64,7 +64,7 @@ class ParserFactory(object):
     def host_to_parser(host):
         host = host.lower()
         module_name = re.sub(r'[.-]', '_', host)
-        class_name = re.sub(r"(?:^|_)(.)", lambda x: x.group(0)[-1].upper(), module_name)
+        class_name = re.sub(r"(?:^|_)(.)", lambda x: x.group(0)[-1].upper(), module_name) + "Parser"
 
         return module_name, class_name
 

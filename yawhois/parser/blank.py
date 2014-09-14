@@ -1,6 +1,6 @@
 from .base import ParserBase
 
-class Blank(ParserBase):
+class BlankParser(ParserBase):
 
     def __init__(self, *args):
         super(Blank, self).__init__(*args)

@@ -30,31 +30,31 @@ class VerisignScanner(ScannerBase):
             result = self._input.results[0]
             if "Sorry, the Whois database is currently down" in result:
                 self._input.skip_until("^[^\*]|\z")
-                self.__ast["response:unavailable"] = True
+                self._ast["response:unavailable"] = True
             else:
                 self.mark_visited()
 
     def scan_available(self):
         if self._input.scan('No match for "(.+?)"\.\n'):
-            self.__ast["Domain Name"] = self._input.results[1].strip()
+            self._ast["Domain Name"] = self._input.results[1].strip()
 
     def scan_disclaimer(self):
         if self._input.match("^TERMS OF USE:"):
-            self.__ast["Disclaimer"] = " ".join(self._scan_lines_to_array("(.+)\n"))
+            self._ast["Disclaimer"] = " ".join(self._scan_lines_to_array("(.+)\n"))
 
     def scan_notice(self):
         if self._input.match("^NOTICE:"):
-            self.__ast["Notice"] = " ".join(self._scan_lines_to_array("(.+)\n"))
+            self._ast["Notice"] = " ".join(self._scan_lines_to_array("(.+)\n"))
 
     def scan_keyvalue_indented(self):
         if self._input.scan("\s+(.+?):(.*?)\n"):
             key, value = self._input.results[1].strip(), self._input.results[2].strip()
-            if self.__ast.get(key) is None:
-                self.__ast[key] = value
+            if self._ast.get(key) is None:
+                self._ast[key] = value
             else:
-                if not isinstance(self.__ast.get(key), list):
-                    self.__ast[key] = [self.__ast[key]]
-                self.__ast[key].append(value)
+                if not isinstance(self._ast.get(key), list):
+                    self._ast[key] = [self._ast[key]]
+                self._ast[key].append(value)
 
     def skip_lastupdate(self):
         self._input.skip(">>>(.+?)<<<\n")
@@ -64,11 +64,11 @@ class VerisignScanner(ScannerBase):
 
     def skip_ianaservice(self):
         if self._input.match("IANA Whois Service"):
-            self.__ast["IANA"] = True
+            self._ast["IANA"] = True
             self._input.terminate()
 
     def is_visited(self):
-        return self.__tmp.get("visited:" + self._input.pos)
+        return self_tmp.get("visited:" + self._input.pos)
 
     def mark_visited(self):
-        self.__tmp["visited:" + self._input.pos] = True
+        self._tmp["visited:" + self._input.pos] = True

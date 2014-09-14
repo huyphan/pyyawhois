@@ -20,13 +20,17 @@ class ScannableParserBase(ParserBase):
     '''
 
     _scanner = None
-    __ast    = None
+    _ast    = None
 
     def node(self, key):
-        return self.ast[key]
+
+        if self._ast is None:
+            self._ast = self.parse()
+
+        return self._ast[key]
 
     def parse(self):
-        if type(self._scanner) == list:
+        if isinstance(self._scanner, (list, tuple)):
             scanner  = self._scanner[0]
             settings = self._scanner[-1]
         else:
@@ -34,10 +38,3 @@ class ScannableParserBase(ParserBase):
             settings = {}
 
         return scanner(settings).parse(self.content_for_scanner)
-
-    @property
-    def ast(self):
-        if self.__ast is None:
-            self.__ast = self.parse()
-
-        return self.__ast
