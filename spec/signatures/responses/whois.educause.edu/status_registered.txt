@@ -1,0 +1,8 @@
+^Name Servers
+^Domain record activated
+^Technical Contact
+^Domain expires
+^Domain record last updated
+^Administrative Contact
+^Registrant
+^Domain Name

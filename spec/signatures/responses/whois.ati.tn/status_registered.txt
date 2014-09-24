@@ -1,0 +1,25 @@
+^Tech. Address 	
+^Domain   	
+^Owner Name 	
+^Tech. Tel 	
+^Tech. Name  	
+^Tech. Fax 	
+^Owner Created	
+^Admin. Fax 	
+^Owner Email	
+^Admin. Address 	
+^Admin. Email	
+^Admin. Updated	
+^Owner Tel 	
+^Owner Address 	
+^Owner Fax	
+^Tech. Email 	
+^Registrar	
+^Owner Updated	
+^Admin. Tel 	
+^Admin. Created	
+^Acivated 	
+^NameServers	
+^Tech. Created 	
+^Admin. Name  	
+^Tech. Updated	

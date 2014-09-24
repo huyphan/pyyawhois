@@ -113,13 +113,13 @@ class ScannerBase(object):
 
     def scan_keyvalue(self):
         if self._input.scan("(.+?):(.*?)(\n|\z)"):
-            key, value = self._input.results[1], self._input.results[2]
+            key, value = self._input.results[1].strip(), self._input.results[2].strip()
 
             if self._tmp.get("_section"):
                 target = self._ast[self._tmp.get("_section")] or {}
             else:
                 target = self._ast
-                
+
             if not target.has_key(key):
                 target[key] = value
             elif isinstance(target[key], list):

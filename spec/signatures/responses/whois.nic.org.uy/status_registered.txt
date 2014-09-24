@@ -1,0 +1,10 @@
+^Titular
+Nombre de Dominio
+Registrado por
+Contacto Administrativo
+Contacto Tecnico
+Contacto de Cobranza
+Ultima Actualizacion
+Fecha de Creacion
+Estatus del dominio
+Servidor(es) de Nombres de Dominio

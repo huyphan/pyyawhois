@@ -1,0 +1,6 @@
+^Unicode Domain
+^Record last updated on
+^Domain Servers in listed order
+^Created on
+^Expires on
+^Domain Name

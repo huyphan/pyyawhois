@@ -1,0 +1,11 @@
+Fax
+Email
+^Nameservers
+^Registered
+^Expires
+^Admin Contact
+^Registrant Contact
+^Registrar
+^Technical Contact
+Phone
+^Domain name

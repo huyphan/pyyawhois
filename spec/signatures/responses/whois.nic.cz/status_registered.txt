@@ -1,0 +1,18 @@
+^domain
+^name
+^created
+^nserver
+^registered
+^changed
+^tech-c
+^contact
+^e-mail
+^% Timestamp
+^expire
+^registrar
+^nsset
+^org
+^% http
+^admin-c
+^registrant
+^address

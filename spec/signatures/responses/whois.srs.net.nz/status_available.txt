@@ -1,0 +1,3 @@
+^query_datetime
+domain_name
+^query_status: 220 Available

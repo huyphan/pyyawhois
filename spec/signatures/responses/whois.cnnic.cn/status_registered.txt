@@ -1,0 +1,11 @@
+^Name Server
+^Registrant ID
+^DNSSEC
+^ROID
+^Domain Status
+^Sponsoring Registrar
+^Expiration Date
+^Registrant Contact Email
+^Registration Date
+^Registrant
+^Domain Name

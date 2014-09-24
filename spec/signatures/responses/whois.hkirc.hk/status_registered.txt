@@ -1,0 +1,26 @@
+^Domain Name
+^Domain Status
+^Contract Version
+^Registrar Name
+^Registrar Contact Information
+^Reseller
+^Registrant Contact Information
+^Company English Name
+^Company Chinese name
+^Address
+^Country
+^Email
+^Domain Name Commencement Date
+^Re-registration Status
+^Administrative Contact Information:
+^Family name
+^Given name
+^Phone
+^Fax
+^Account Name
+^Technical Contact Information
+^Company name
+^Name Servers Information
+^Status Information
+^Domain Prohibit Status
+^Expiry Date

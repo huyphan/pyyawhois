@@ -1,0 +1,27 @@
+^org-city
+^domainname
+^adm-name
+^org-zipcode
+^adm-country
+^adm-zipcode
+^registrar-country
+^adm-address
+^tec-country
+^domaintype
+^registrar-email
+^registrar-url
+^ownertype
+^tec-address
+^org-address
+^org-name
+^org-country
+^adm-email
+^registered
+^tec-email
+^tec-city
+^tec-name
+^registrar-name
+^tec-zipcode
+^nserver
+^% (http
+^adm-city

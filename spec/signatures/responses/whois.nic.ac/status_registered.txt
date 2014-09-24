@@ -1,0 +1,6 @@
+^Domain
+^Status
+^Expiry
+^NS 1
+^NS 2
+^Owner

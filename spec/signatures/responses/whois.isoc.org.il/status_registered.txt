@@ -1,0 +1,19 @@
+^status
+^domain
+^zone-c
+^fax-no
+^descr
+^e-mail
+^nserver
+^registrar info
+^reg-name
+^changed
+^registrar name
+^validity
+^phone
+^tech-c
+^person
+^nic-hdl
+^address
+^query
+^admin-c

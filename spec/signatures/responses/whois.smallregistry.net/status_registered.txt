@@ -1,0 +1,25 @@
+^--- #YAML
+^technical_contact
+updated
+trouble
+^administrative_contact
+address
+^registrant
+web
+mobile
+name
+nic-handle
+^registrar
+fax
+^ds-list
+^status
+^updated
+^# https
+^billing_contact
+^name_servers
+^expired
+^name
+^created
+phone
+company
+type

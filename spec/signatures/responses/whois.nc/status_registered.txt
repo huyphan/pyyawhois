@@ -1,0 +1,17 @@
+^Created on 
+^Registrant address 5 
+^Registrant type 
+^Last updated on 
+^Registrant address 3 
+^Registrant address 2 
+^Domain 
+^Domain server 1 
+^Contact lastname 
+^more details on http
+^Domain server 3 
+^Contact firstname 
+^Domain server 2 
+^Registrant address 1 
+^Registrant name 
+^Registrant address 4 
+^Expires on 

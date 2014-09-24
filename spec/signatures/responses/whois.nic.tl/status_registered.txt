@@ -1,0 +1,45 @@
+^Registrant Postal Code
+^Admin Country
+^Registrant Organization
+^Registrant Name
+^Admin Organization
+^Sponsoring Registrar IANA ID
+^Admin ID
+^Sponsoring Registrar
+^Sponsoring Registrar Phone
+^Referral URL
+^Admin Name
+^Sponsoring Registrar Fax
+^by the following terms of use
+^Registrant ID
+^WHOIS Server
+^Admin Street
+^Creation Date
+^Sponsoring Registrar Country
+^Updated Date
+^Admin City
+^Admin Fax
+^Registrant Email
+^Admin Postal Code
+^Admin State/Province
+^Sponsoring Registrar Address
+^Admin Email
+^Domain ID
+^Admin Phone
+^Registrant City
+^Registrant Fax Ext
+^Registrant State/Province
+^Sponsoring Registrar Customer Service Contact
+^Registrant Fax
+^Registrant Phone
+^Registry Expiry Date
+^Name Server
+^Domain Status
+^Admin Phone Ext
+^Registrant Phone Ext
+^Admin Fax Ext
+^Sponsoring Registrar URL
+^Registrant Street
+^Sponsoring Registrar Customer Service Email
+^Registrant Country
+^Domain Name

@@ -1,0 +1,7 @@
+^Domain Name
+^Registrant, Technical Contact, Admin. Contact
+^Billing Contact
+^Resource Records (4):
+Phone
+Fax
+E-mail

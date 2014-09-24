@@ -1,0 +1,17 @@
+^DNSSEC
+^Updated Date
+^Sponsoring Registrar IANA ID
+^Sponsoring Registrar
+^Sponsoring Registrar Phone
+^Referral URL
+^WHOIS Server
+^Creation Date
+^Domain ID
+^Sponsoring Registrar Customer Service Contact
+^Registrant ID
+^Registry Expiry Date
+^Name Server
+^Domain Status
+^Sponsoring Registrar URL
+^Sponsoring Registrar Customer Service Email
+^Domain Name

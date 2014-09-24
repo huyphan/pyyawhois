@@ -1,0 +1,20 @@
+^Status
+^Name Servers
+City
+Latitude
+Name Server
+Contact
+Longitude
+Country
+Registrar
+^Registration Service Provided By
+^Contact
+Creation Date
+^Administrative Contact
+Updated Date
+Address
+Domain Name
+Whois at
+State
+^Domain name
+Owner

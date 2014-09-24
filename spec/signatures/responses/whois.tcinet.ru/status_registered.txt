@@ -1,0 +1,12 @@
+^domain
+^fax-no
+^phone
+^nserver
+^created
+^e-mail
+^Last updated on
+^person
+^state
+^registrar
+^source
+^paid-till

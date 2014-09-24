@@ -1,0 +1,15 @@
+^domain
+^zone-c
+^fax-no
+^descr
+^source
+^nserver
+^tech-c
+^phone
+^e-mail
+^person
+^nic-hdl
+^address
+^remarks
+^mnt-by
+^admin-c

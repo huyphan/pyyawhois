@@ -1,0 +1,16 @@
+Description#
+Nom de domaine#
+Contact administratif#
+Organisme administratif#
+Adresse contact administratif#
+Telephone contact administratif#
+Fax contact administratif#
+Mail contact administratif#
+Contact technique#
+Organisme technique#
+Adresse contact technique#
+Telephone contact technique#
+Fax contact technique#
+Mail contact technique#
+Registrar#
+Date de creation#

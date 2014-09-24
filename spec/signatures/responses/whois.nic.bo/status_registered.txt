@@ -1,0 +1,15 @@
+^Dominio
+^TITULAR
+^CONTACTO FINANCIERO
+^Fecha de vencimiento
+^CONTACTO ADMINISTRATIVO
+^Direccion
+^Organizacion
+^Ciudad
+^CONTACTO TECNICO
+^Dominio
+^Pais
+^Nombre
+^Telefono
+^Email
+^Fecha de registro

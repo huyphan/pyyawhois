@@ -1,0 +1,33 @@
+^Registrant Postal Code
+^DNSSEC
+^Registrant Organization
+^Registrant Name
+^Admin Organization
+^Sponsoring Registrar IANA ID
+^Referral URL
+^Sponsoring Registrar
+^Admin ID
+^Registrant ID
+^WHOIS Server
+^Creation Date
+^Sponsoring Registrar Country
+^Updated Date
+^Sponsoring Registrar Customer Service Contact
+^Registrant Email
+^Sponsoring Registrar Address
+^Sponsoring Registrar Admin Contact
+^Admin Email
+^Domain ID
+^Registrant City
+^Registrant State/Province
+^TERMS OF USE
+^Registrant Phone
+^Registry Expiry Date
+^Name Server
+^Domain Status
+^Registrant Phone Ext
+^Sponsoring Registrar URL
+^Registrant Street
+^Sponsoring Registrar Customer Service Email
+^Registrant Country
+^Domain Name

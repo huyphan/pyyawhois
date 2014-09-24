@@ -1,0 +1,49 @@
+Registrar Registration Expiration Date
+Tech Email
+Admin Organization
+Registrant Postal Code
+Tech Street
+Registrant Organization
+Tech Organization
+Registrant Name
+Admin Country
+Updated Date
+Admin Name
+Registrar IANA ID
+Admin City
+Tech Name
+Tech Country
+Tech Fax Ext
+Creation Date
+Tech Postal Code
+Admin Street
+Tech Phone
+Admin Phone
+Registry Admin ID
+Registry Registrant ID
+Admin Email
+Admin Postal Code
+Admin Phone Ext
+Registrar Abuse Contact Email
+Admin State/Province
+Registry Tech ID
+Registrar
+URL of the ICANN WHOIS Data Problem Reporting System
+Registrant State/Province
+Registrant City
+Tech City
+Registrar Abuse Contact Phone
+Registrar URL
+Registry Domain ID
+Registrar WHOIS Server
+Name Server
+Tech Phone Ext
+DNSSEC
+Admin Fax
+Admin Fax Ext
+Registrant Country
+Registrant Street
+Tech State/Province
+Domain Name
+Domain Status
+Tech Fax

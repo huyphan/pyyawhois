@@ -1,0 +1,16 @@
+^fax-no
+^e-mail
+^source
+^holder-c
+^address
+^domain
+^nic-hdl
+^tech-c
+^last-updated
+^org
+^remarks
+^nserver
+^admin-c
+^ascii
+^expire-date
+^phone

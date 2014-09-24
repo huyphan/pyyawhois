@@ -1,0 +1,7 @@
+^Owner's handle
+^Domain
+^Administrative Contact's handle
+^Created
+^Technical Contact's handle
+^Registrar
+^Nameserver

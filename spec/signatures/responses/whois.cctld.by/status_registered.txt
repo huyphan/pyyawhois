@@ -1,0 +1,7 @@
+^Domain Name
+^Domain Name Administrator
+^Registrar
+^Name Server
+^Updated Date
+^Creation Date
+^Expiration Date

@@ -1,0 +1,21 @@
+^Last modified 
+^Street Address
+^Postal Code
+^Phone Number
+^Primary ip address
+^Primary server
+^Email Address
+^Domain status 
+^Name
+^Secondary server
+^Organization Name
+^Domain Name
+^NIC Handle
+^Secondary ip address
+^State
+^Country
+^Domain created
+^Registar created
+^Current Registar
+^City
+^Fax Number

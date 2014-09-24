@@ -1,0 +1,16 @@
+^status
+^domain
+^fax-no
+^created
+^registrar-url
+^tech-c
+^nic-hdl
+^email
+^source
+^expire
+^registrar
+^address
+^organization
+^nameserver
+^registrant
+^phone

@@ -1,0 +1,34 @@
+^Tech Email
+^Registrant Postal Code
+^Admin Country
+^Registrant Organization
+^Registrant Name
+^Admin Organization
+^Tech Street
+^Admin Name
+^Sponsoring Registrar
+^Tech Organization
+^Admin ID
+^DNSSEC
+^Admin Street
+^Creation Date
+^Updated Date
+^Admin City
+^Tech Country
+^Tech Postal Code
+^% available to
+^Registrant Email
+^Admin Postal Code
+^Admin Email
+^Domain ID
+^Tech ID
+^Registrant City
+^Tech Name
+^Registrant ID
+^Tech City
+^Registry Expiry Date
+^Name Server
+^Domain Status
+^Registrant Street
+^Registrant Country
+^Domain Name

@@ -1,0 +1,14 @@
+^Updated
+Fax
+^Expired
+^Billing Contact
+^Created
+Zip/Postal code
+^Domain servers in listed order
+^Domain Status
+^Technical Contact
+^Administrative Contact
+^Whois information provided by
+Phone
+^Registrant
+^Domain Name

@@ -1,0 +1,16 @@
+^Status
+^Domain
+Name
+Language
+^Nameservers
+^Registered
+Website
+^Keys
+Fax
+^Registrar
+Phone
+^Flags
+^Registrar Technical Contacts
+^Registrant
+Organisation
+Email

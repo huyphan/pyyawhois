@@ -1,0 +1,10 @@
+^status
+^domain
+^descr
+^source
+^changed
+^mnt-lower
+^nserver
+^tech-c
+^mnt-by
+^admin-c

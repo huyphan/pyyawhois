@@ -78,6 +78,7 @@ class Record(object):
     def technical_contact(self):
         for parser in self.parsers:
             if parser.is_property_supported("technical_contacts"):
+                print parser.technical_contacts
                 return parser.technical_contacts[0]
 
     # Returns a Hash containing all supported properties for this record

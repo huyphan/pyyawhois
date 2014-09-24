@@ -1,0 +1,12 @@
+Adminstrative Contact
+Referral URL
+Name Server
+^Domain creation date
+Technical Contact
+Fax
+Telephone
+Domain Registrant
+Registrar
+Billing Contact
+Domain name
+^Domain expiration date

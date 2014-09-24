@@ -1,0 +1,21 @@
+^Postal Area
+^Post Address
+^Tech-c Handle
+^Id Type
+^Last updated
+^Domain Holder Handle
+^Domain Name
+^Fax Number
+^Phone Number
+^Type
+^Email Address
+^Name Server Handle
+^Created
+^Country
+^Name
+^Additional information
+^Postal Code
+^Id Number
+^Legal-c Handle
+^NORID Handle
+^Registrar Handle

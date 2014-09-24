@@ -1,0 +1,18 @@
+^Status
+^City
+^Domain
+^CountryCode
+^Nserver
+^Type
+^Organisation
+^Changed
+^Fax
+^Phone
+^Address
+^PostalCode
+^% http
+^% Version
+^Email
+^Name
+^[Tech-C]
+^[Zone-C]

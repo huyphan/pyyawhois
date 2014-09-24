@@ -1,0 +1,10 @@
+^status
+^domain
+^dnssec
+^descr
+^created
+^nserver
+^expires
+^modified
+^phone
+^address

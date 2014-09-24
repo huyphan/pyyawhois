@@ -1,0 +1,31 @@
+^City
+^Organisation
+^State/Province
+^Created by ID
+^Voice extn
+^Contact ID
+^Last updated by
+^Email
+^Fax
+^Expiry Date
+^Last updated
+^Street 2
+^Sponsoring registrar ID
+^Created by
+^Last updated by ID
+^Street 1
+^Name
+^Street 3
+^Created
+^Country
+^Domain ID
+^Last transferred
+^Voice
+^Fax extn
+^Domain Status
+^Host ID
+^Sponsoring registrar
+^Host Name
+^Postal code
+^Contact Type
+^Domain Name

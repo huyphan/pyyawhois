@@ -1,0 +1,18 @@
+^Status
+^Name Servers
+^Phone Number
+^Billing Contact
+^Name
+^Fax Number
+^Created
+^Admin Contact
+^Organisation
+^Expires
+^Registrar Name
+^Modified
+^Registrant
+^% remarks
+^Technical Contact
+^Address
+^Query
+^Email Address

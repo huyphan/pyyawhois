@@ -1,0 +1,11 @@
+Domain Name
+Registrar ID
+Registrar Name
+Status
+Registrant Contact ID
+Registrant Contact Name
+Registrant Contact Email
+Tech Contact ID
+Tech Contact Name
+Tech Contact Email
+Name Server

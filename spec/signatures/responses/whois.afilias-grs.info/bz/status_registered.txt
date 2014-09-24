@@ -1,0 +1,10 @@
+^Status
+^Name Server
+^Whois Server
+^Last Updated On
+^Created On
+^Domain ID
+^Sponsoring Registrar
+^Domain Name
+^Referral URL
+^Expiration Date

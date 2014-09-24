@@ -1,0 +1,9 @@
+^Status
+^Domain
+^Contact name
+^Registered
+^Registrar email
+^Registrar
+^Contact email
+^Nameserver
+^Registrar website

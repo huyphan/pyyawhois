@@ -1,0 +1,15 @@
+^Domain
+^Name Server 3
+^Name
+^Name Server 1
+^Created
+^Country
+^Telephone
+^NS2 IP address
+^Address
+^NS4 IP address
+^NS1 IP address
+^FAX No
+^Last Updated
+^Domain Name
+^Name Server 2

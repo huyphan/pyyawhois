@@ -1,0 +1,23 @@
+Department
+Admin Contact Name
+Primary MX IP
+Place
+Primary NS
+Select One
+Tech Contact Name
+Postal Address
+Domain Name
+Secondary NS IP
+Postal Address
+Email
+Secondary NS
+Postal Code
+Primary MX name
+Name of Applicant
+Postal Code
+Department
+Email
+Department Name
+Primary NS IP
+Title\Position
+Date

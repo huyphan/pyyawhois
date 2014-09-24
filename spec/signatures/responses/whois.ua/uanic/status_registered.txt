@@ -1,0 +1,23 @@
+^domain
+^mnt-by
+^% Administrative Contact
+^admin-c
+^% Domain Record
+^org-id
+^e-mail
+^source
+^status
+^fax-no
+^% Technical Contact
+^phone
+^tech-c
+^address
+^remark
+^license
+^created
+^nserver
+^changed
+^dom-public
+^url
+^nic-handle
+^organization

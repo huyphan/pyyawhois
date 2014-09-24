@@ -1,0 +1,36 @@
+^Registrant Postal Code
+^Admin Country
+^Registrant Organization
+^Please note
+^Registrant Name
+^Admin Organization
+^Registrar Expiration Date
+^Registrar Registration Expiration Date
+^Tech Street
+^Tech Organization
+^Admin Name
+^Admin Street
+^Creation Date
+^Updated Date
+^Admin City
+^Tech Country
+^Tech Postal Code
+^Admin Postal Code
+^Admin State/Province
+^Tech Email
+^Admin Email
+^Registrar URL
+^Admin Phone
+^Registrant City
+^Registrar
+^Tech Phone
+^Registrant State/Province
+^Admin Fax
+^Tech Name
+^Tech City
+^Name Server
+^Registrant Street
+^Registrant Country
+^Tech Fax
+^Tech State/Province
+^Domain Name

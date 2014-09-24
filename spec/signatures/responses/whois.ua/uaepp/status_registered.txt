@@ -1,0 +1,29 @@
+^contact-id
+^domain
+^address
+^mnt-by
+^admin-c
+^registrant
+^city
+^person
+^% Administrative Contacts
+^organization-loc
+^source
+^% Registrant
+^e-mail
+^status
+^fax
+^% Technical Contacts
+^country-loc
+^expires
+^phone
+^tech-c
+^% Registrar
+^created
+^nserver
+^country
+^modified
+^dom-public
+^url
+^registrar
+^organization

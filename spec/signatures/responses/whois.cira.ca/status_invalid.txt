@@ -1,0 +1,4 @@
+^Domain status
+^Error message
+^Error code
+^Domain name

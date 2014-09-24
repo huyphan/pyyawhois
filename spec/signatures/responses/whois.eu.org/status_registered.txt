@@ -1,0 +1,10 @@
+^domain
+^changed
+^tech-c
+^admin-c
+^person
+^nic-hdl
+^address
+^phone
+^e-mail
+^changed

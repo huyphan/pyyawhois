@@ -1,0 +1,12 @@
+Domain Name
+Domain ID
+Whois Server
+Referral URL
+Updated Date
+Creation Date
+Expiration Date
+Sponsoring Registrar
+Sponsoring Registrar IANA ID
+Domain Status
+Name Server
+DNSSEC

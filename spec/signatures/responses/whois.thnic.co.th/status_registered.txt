@@ -1,0 +1,10 @@
+^Status
+^Name Server
+^Domain
+^Exp date
+^Updated date
+^Tech Contact
+^Created date
+^Renew date
+^Registrar
+^Domain Holder

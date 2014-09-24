@@ -1,0 +1,14 @@
+Email
+^Name servers in the listed order
+Name
+fax
+PID
+^Billing Contact
+^Technical Contact
+^Domain support
+^Administrative Contact
+^Record expires on Sun Mar 30 23
+Address
+^Record last updated on Mon Apr 19 21
+phone
+^Record created

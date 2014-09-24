@@ -1,0 +1,34 @@
+^website
+^domain
+^anniversary
+^notify
+^admin-c
+^nsl-id
+^obsoleted
+^e-mail
+^ns-list
+^eligstatus
+^source
+^%% See http
+^%% version              
+^type
+^status
+^holder-c
+^zone-c
+^fax-no
+^registered
+^eligdate
+^nic-hdl
+^phone
+^tech-c
+^anonymous
+^address
+^last-update
+^trouble
+^hold
+^created
+^nserver
+^country
+^changed
+^contact
+^registrar

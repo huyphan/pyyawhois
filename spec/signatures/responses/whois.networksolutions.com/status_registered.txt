@@ -1,0 +1,53 @@
+^Tech Email
+^Registrant Postal Code
+^Admin Country
+^Registrant Organization
+^Registrant Name
+^Admin Organization
+^Tech Street
+^Registrar Registration Expiration Date
+^Registrant State
+^Registrant Fax
+^DNSSEC
+^Tech Organization
+^Admin Name
+^>>> Last update of whois database
+^Admin Phone Ext
+^Registrar IANA ID
+^Admin Email
+^Admin Street
+^Tech Name
+^Creation Date
+^Updated Date
+^Admin City
+^Tech Country
+^URL of the ICANN WHOIS Data Problem Reporting System
+^Admin Fax
+^Registry Admin ID
+^Tech Postal Code
+^Registrant Email
+^Admin Postal Code
+^Tech Phone Ext
+^Reseller
+^Registrar URL
+^Admin State
+^Registry Tech ID
+^Registry Registrant ID
+^Admin Phone
+^Registrant City
+^Registrar
+^Tech Phone
+^Registry Domain ID
+^Registrant Phone
+^Tech City
+^Name Server
+^Registrar Abuse Contact Phone
+^Domain Status
+^Registrant Phone Ext
+^Registrar WHOIS Server
+^Tech State
+^Registrant Street
+^Registrar Abuse Contact Email
+^Registrant Country
+^Tech Fax
+^Domain Name

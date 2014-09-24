@@ -1,0 +1,16 @@
+^Registrant
+^Admin Contact
+^Technical Contacts
+^Registrar
+^Nameservers
+^Status
+^Domain
+^Created
+ContactID
+Created
+Name
+^Expire Date
+Web
+Address
+Organization
+^Last Update

@@ -1,0 +1,5 @@
+^DNSSEC
+^Domain ID
+^Sponsoring Registrar IANA ID
+^Sponsoring Registrar
+^Domain Name

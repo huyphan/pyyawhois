@@ -1,0 +1,68 @@
+^Billing Fax Ext
+^Registrant Postal Code
+^Admin Country
+^Registrant Organization
+^Registrant Name
+^Admin Organization
+^Tech Email
+^Tech Street
+^Sponsoring Registrar IANA ID
+^Admin ID
+^DNSSEC
+^Sponsoring Registrar
+^Tech Organization
+^Tech ID
+^Billing State/Province
+^Referral URL
+^Admin Name
+^Billing Name
+^Billing Country
+^Billing Phone Ext
+^Trademark Country
+^Admin Phone Ext
+^Trademark Date
+^Admin Street
+^Tech Name
+^Creation Date
+^Billing Postal Code
+^Updated Date
+^Admin City
+^Tech Country
+^Billing ID
+^Registrant Phone
+^Trademark Number
+^Admin Fax
+^Billing Phone
+^Registrant Email
+^Admin Postal Code
+^Admin State/Province
+^Tech Phone Ext
+^Admin Email
+^Domain ID
+^Billing Fax
+^Admin Phone
+^Registrant City
+^Tech Phone
+^Billing Street
+^Trademark Name
+^Registrant Fax Ext
+^Registrant State/Province
+^Tech Fax
+^Registrant Fax
+^Registrant ID
+^Tech City
+^Registry Expiry Date
+^WHOIS Server
+^Billing Organization
+^Name Server
+^Billing City
+^Domain Status
+^Tech Postal Code
+^Registrant Phone Ext
+^Admin Fax Ext
+^Registrant Street
+^Registrant Country
+^Billing Email
+^Tech Fax Ext
+^Tech State/Province
+^Domain Name

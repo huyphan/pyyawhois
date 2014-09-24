@@ -1,0 +1,14 @@
+NIC handle
+tel
+^NAME SERVER INFORMATION
+^activated on
+^DNSSEC
+^TECHNICAL CONTACT(S)
+^processed from
+^registration status
+^requested on
+^ADMINISTRATIVE CONTACT
+^expires at
+fax
+^REGISTRANT
+^DOMAIN NAME

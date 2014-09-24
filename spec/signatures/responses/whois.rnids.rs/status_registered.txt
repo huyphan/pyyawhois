@@ -1,0 +1,13 @@
+^Modification date
+^Domain status
+^Administrative contact
+^Tax ID
+^ID Number
+^Owner
+^Registrar
+^Expiration date
+^DNS
+^Address
+^Technical contact
+^Registration date
+^Domain name

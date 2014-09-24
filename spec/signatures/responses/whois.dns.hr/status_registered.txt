@@ -1,0 +1,8 @@
+^domain
+^descr
+^person
+^expires
+^nic-hdl
+^source
+^tech-c
+^address

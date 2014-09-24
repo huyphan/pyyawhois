@@ -1,0 +1,15 @@
+^Domain Name
+^Registrant
+^Registrant Address
+^Registrant Zip Code
+^Administrative Contact(AC)
+^AC E-Mail
+^AC Phone Number
+^Registered Date
+^Last Updated Date
+^Expiration Date
+^Publishes
+^Authorized Agency
+^Primary Name Server
+Host Name
+^Secondary Name Server

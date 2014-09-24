@@ -1,0 +1,18 @@
+^city
+^domain
+^fax-no
+^street address
+^nserver
+^country
+^changed
+^e-mail
+^phone
+^source
+^tech-c
+^nic-hdl
+^postal code
+^remarks
+^organization
+^admin-c
+^registrant
+^personname

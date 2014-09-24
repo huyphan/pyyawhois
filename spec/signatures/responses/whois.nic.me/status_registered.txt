@@ -1,0 +1,62 @@
+^Last Transferred Date
+^Registrant Postal Code
+^DNSSEC
+^Registrant Organization
+^Nameservers
+^Admin State/Province
+^Registrant Name
+^Admin Organization
+^Admin Phone Ext.
+^Admin ID
+^Sponsoring Registrar
+^Tech Organization
+^Admin Country/Economy
+^Registrant FAX
+^Date Trademark Applied For
+^Admin Name
+^Domain Expiration Date
+^Trademark Country
+^Admin FAX Ext.
+^Admin City
+^Last Updated by Registrar
+^Registrant Phone
+^Tech Country/Economy
+^Created by
+^Trademark Number
+^Tech FAX
+^Tech Postal Code
+^Registrant Address
+^Domain Create Date
+^Admin Address2
+^Admin Postal Code
+^Registrant Phone Ext.
+^Registrant Country/Economy
+^Domain Last Updated Date
+^Tech Address
+^Domain ID
+^Admin Address
+^Tech FAX Ext.
+^Admin Phone
+^Registrant City
+^Tech Phone
+^Tech Address3
+^Trademark Name
+^Admin E-mail
+^Registrant State/Province
+^Tech Name
+^Registrant ID
+^Tech City
+^Date Trademark Registered
+^Domain Status
+^Registrant FAX Ext.
+^Registrant E-mail
+^Registrant Address2
+^Registrant Address3
+^Tech Phone Ext.
+^Tech E-mail
+^Tech ID
+^Admin Address3
+^Admin FAX
+^Tech State/Province
+^Domain Name
+^Tech Address2

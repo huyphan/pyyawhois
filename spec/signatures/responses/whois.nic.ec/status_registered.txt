@@ -1,0 +1,16 @@
+^Name Servers
+^Phone Number
+^Name
+^Fax Number
+^Created
+^Country
+^Organisation
+^Expires
+^Registrar Name
+^Modified
+^Admin Contact
+^Address
+^Query
+^Registration URL
+^Registrant
+^Email Address

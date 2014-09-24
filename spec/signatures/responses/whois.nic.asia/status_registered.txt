@@ -1,0 +1,95 @@
+^Administrative Phone Ext.
+^Last Transferred Date
+^Billing Postal Code
+^Technical Organization
+^Operations and Notifications State/Province
+^Operations and Notifications Address2
+^Operations and Notifications Address3
+^Billing Name
+^Administrative FAX Ext.
+^Technical City
+^Technical FAX
+^Administrative ID
+^Created by
+^Operations and Notifications FAX Ext.
+^Billing Phone
+^Domain Create Date
+^Administrative Name
+^Operations and Notifications ID
+^Billing FAX Ext.
+^Registrant ID
+^Operations and Notifications Address
+^Operations and Notifications Country/Economy
+^Technical Phone Ext.
+^Administrative Country/Economy
+^Domain Name
+^Billing Country/Economy
+^Registrant Name
+^Administrative E-mail
+^Registrant FAX
+^Billing Address
+^Billing State/Province
+^IPR Type
+^Technical FAX Ext.
+^Administrative Postal Code
+^CED Type of Legal Entity
+^Operations and Notifications Phone
+^IPR Name
+^Technical E-mail
+^Technical Postal Code
+^Operations and Notifications Phone Ext.
+^IPR CC Locality
+^Technical Address
+^Billing Organization
+^Operations and Notifications Postal Code
+^Registrant City
+^Registrant Organization
+^Administrative State/Province
+^Operations and Notifications Name
+^CED ID
+^Domain Expiration Date
+^CED Form of Identification
+^Status
+^Operations and Notifications City
+^Billing Phone Ext.
+^Billing Address3
+^Billing Address2
+^Administrative Organization
+^Registrant Address
+^Registrant Phone Ext.
+^Domain Last Updated Date
+^Domain ID
+^Administrative Phone
+^Technical Country/Economy
+^Registrant State/Province
+^Technical Name
+^Technical State/Province
+^Administrative Address3
+^Administrative Address2
+^Domain Status
+^Registrant FAX Ext.
+^Operations and Notifications Organization
+^Registrant Address2
+^Registrant Address3
+^Administrative Address
+^Technical Phone
+^Registrant Postal Code
+^Nameservers
+^CED CC Locality
+^Sponsoring Registrar
+^Operations and Notifications E-mail
+^Billing ID
+^Last Updated by Registrar
+^CED Identification Number
+^Operations and Notifications FAX
+^Registrant Country/Economy
+^Technical Address2
+^Registrant Phone
+^Billing E-mail
+^Billing City
+^Registrant E-mail
+^Technical ID
+^Administrative FAX
+^Administrative City
+^Technical Address3
+^Billing FAX

@@ -1,0 +1,16 @@
+^Name servers
+Number
+Postal address
+^Expiry date
+Fax
+^Updated date
+^Creation date
+Name
+^Domain status
+Phone
+Email
+^Registrar
+^Administrative contact
+^Technical contact
+^Registrant
+^Domain name

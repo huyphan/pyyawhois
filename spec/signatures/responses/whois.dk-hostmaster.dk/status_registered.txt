@@ -1,0 +1,16 @@
+^Status
+^City
+^Domain
+^Attention
+^Handle
+^Name
+^VID
+^Hostname
+^Country
+^Registered
+^Expires
+^Phone
+^DNS
+^Address
+^Postalcode
+^Registration period

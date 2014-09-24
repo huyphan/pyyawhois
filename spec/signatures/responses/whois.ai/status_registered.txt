@@ -1,0 +1,25 @@
+^Organization Using Domain Name
+^Administrative Contact
+^Technical Contact
+^Billing Contact
+^Nameservers
+Postal Code
+E-Mailbox
+^Last paid by
+State
+City
+Country
+(I)ndividual (R)ole
+Secondary Server Hostname
+Primary Server Hostname
+Third Server Hostname
+Organization Name
+Complete Domain Name
+Fax Number
+Secondary Server Netaddress
+Primary Server Netaddress
+Street Address
+Fourth Server Hostname
+Name (Last, First)
+NIC Handle (if known)
+Phone Number

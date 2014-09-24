@@ -1,0 +1,9 @@
+^Status
+^Name Servers
+^Name
+^Created
+^Organisation
+^Registrar Name
+^Query
+^Registration URL
+^Registrant

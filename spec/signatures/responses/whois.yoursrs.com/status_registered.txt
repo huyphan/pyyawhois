@@ -1,0 +1,52 @@
+^Registrant Street1
+^Registrant Postal Code
+^ADMIN Country
+^Registrant Organization
+^TECH ID
+^Registrant Name
+^ADMIN Organization
+^TECH State
+^BILLING Organization
+^Registrant State
+^ADMIN Name
+^TECH Street1
+^Sponsoring Registrar
+^BILLING Email
+^BILLING ID
+^ADMIN ID
+^TECH Fax
+^TECH Postal Code
+^Status
+^TECH Email
+^Registrant ID
+^BILLING Postal Code
+^BILLING City
+^ADMIN City
+^TECH Organization
+^BILLING Phone
+^BILLING Fax
+^ADMIN Fax
+^Expiration Date
+^Registrant Email
+^ADMIN Postal Code
+^ADMIN Street1
+^Reseller
+^ADMIN State
+^ADMIN Phone
+^Registrant City
+^TECH Country
+^BILLING State
+^Registrant Fax
+^BILLING Name
+^Registrant Phone
+^BILLING Street1
+^BILLING Country
+^Name Server
+^Last Updated On
+^Created On
+^ADMIN Email
+^TECH Phone
+^Registrant Country
+^TECH Name
+^TECH City
+^Domain Name

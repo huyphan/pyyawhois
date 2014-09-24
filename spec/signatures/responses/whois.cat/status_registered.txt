@@ -1,0 +1,64 @@
+^Tech Email
+^Registrant Postal Code
+^Admin Country
+^Registrant Organization
+^Registrant Name
+^Registrar ID
+^Billing Fax Ext
+^Tech Street
+^Billing Country
+^Admin Name
+^Billing Phone
+^Tech Organization
+^Domain Language
+^Billing State/Province
+^Admin ID
+^Billing Name
+^% NOTICE
+^Status
+^Billing Phone Ext
+^Admin Phone Ext
+^Billing Postal Code
+^Admin Street
+^Tech Name
+^Tech ID
+^Admin City
+^Tech Country
+^Billing ID
+^Registrant Phone
+^Billing Street
+^Admin Fax
+^Tech Postal Code
+^Expiration Date
+^Registrant Email
+^Admin Postal Code
+^Admin State/Province
+^Tech Phone Ext
+^Admin Email
+^Name Server ACE
+^Admin Organization
+^Domain ID
+^Billing Fax
+^Admin Phone
+^Registrant City
+^Tech Phone
+^Billing Email
+^Registrant Fax Ext
+^Registrant State/Province
+^Registrant Fax
+^Registrant ID
+^Tech City
+^Billing Organization
+^Name Server
+^Billing City
+^Last Updated On
+^Created On
+^Registrant Phone Ext
+^Admin Fax Ext
+^Domain Name ACE
+^Registrant Street
+^Registrant Country
+^Tech Fax
+^Tech Fax Ext
+^Tech State/Province
+^Domain Name

@@ -1,0 +1,9 @@
+^Owner's handle
+^Domain
+^Address of
+^Administrative Contact's handle
+^Created
+^Technical Contact's handle
+^Registrar
+^Nameserver
+^Expiration date

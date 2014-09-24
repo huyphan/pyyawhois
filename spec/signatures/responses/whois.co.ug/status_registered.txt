@@ -1,0 +1,16 @@
+^Status
+^City
+^Domain
+^Description
+^Phone
+^Tech Contact
+^NIC
+^Registered
+^Admin Contact
+^Updated
+^Expiry
+^Source
+^Country
+^Address
+^MNT-BY
+^Nameserver

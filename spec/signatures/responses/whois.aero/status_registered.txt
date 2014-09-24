@@ -1,0 +1,72 @@
+^Registrant Street2
+^Registrant Street3
+^Updated On
+^Registrant Street1
+^Registrant Postal Code
+^Admin Country
+^Registrant Organization
+^Admin State/Province
+^Registrant Name
+^Admin Organization
+^Admin Phone Ext.
+^Admin ID
+^Tech Organization
+^Sponsoring Registrar
+^ENS_AuthId
+^Billing State/Province
+^Registrant FAX
+^Admin Name
+^Tech Email
+^Billing Street1
+^Billing Name
+^Billing Street3
+^Billing Street2
+^Billing Country
+^Tech Street3
+^Billing Postal Code
+^Billing Phone Ext.
+^Admin FAX Ext.
+^Admin Street2
+^Admin City
+^Tech Country
+^Billing ID
+^Registrant Phone
+^Tech FAX Ext.
+^Tech FAX
+^Billing Phone
+^Updated By
+^Registrant Email
+^Admin Street3
+^Registrant Phone Ext.
+^Admin Street1
+^Admin Email
+^Domain ID
+^Billing FAX
+^Expires On
+^Admin Phone
+^Registrant City
+^Tech Phone
+^Billing Email
+^Created By
+^Registrant State/Province
+^Tech Name
+^Billing FAX Ext.
+^Registrant ID
+^Tech City
+^Admin Postal Code
+^Name Server
+^Tech Postal Code
+^Maintainer
+^Billing City
+^Domain Status
+^Registrant FAX Ext.
+^Created On
+^Billing Organization
+^Tech Phone Ext.
+^Tech Street2
+^Tech ID
+^Tech Street1
+^Registrant Country
+^Admin FAX
+^Tech State/Province
+^Domain Name

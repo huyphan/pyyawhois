@@ -46,3 +46,9 @@ def matches_email(string):
 
 def matches_asn(string):
     return re.compile("^as\d+$", re.I).match(string)
+
+def array_wrapper(obj):
+    if isinstance(obj, list):
+        return obj
+
+    return [obj]

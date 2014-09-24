@@ -1,0 +1,6 @@
+^Status
+^Name Servers
+^Registrar
+^Query
+^Administrative Contact
+^Registrant

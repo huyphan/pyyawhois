@@ -1,0 +1,6 @@
+^Name server
+^Created
+^DNS update
+^Domain name
+^Registrant
+^Expiration date

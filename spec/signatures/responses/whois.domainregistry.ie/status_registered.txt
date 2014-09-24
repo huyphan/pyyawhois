@@ -1,0 +1,14 @@
+^holder-type
+^domain
+^ren-status
+^descr
+^renewal
+^nserver
+^nic-hdl
+^in-zone
+^source
+^tech-c
+^person
+^registration
+^wipo-status
+^admin-c

@@ -1,0 +1,6 @@
+Contacts
+^URL
+^Registrar
+Domain servers
+Domain Name
+^Registrant

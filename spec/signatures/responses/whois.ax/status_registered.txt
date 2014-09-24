@@ -1,0 +1,14 @@
+^Domain
+^Name Server 4
+^Name Server 3
+^Name
+^Name Server 1
+^Created
+^Country
+^Telephone
+^Name Server 2
+^Address
+^Administrative Contact
+^Organization
+^Domain Name
+^Email address

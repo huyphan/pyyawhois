@@ -1,0 +1,6 @@
+^Estado / Status
+^Data de expiração / Expiration Date (dd/mm/yyyy)
+^Nome de domínio / Domain Name
+^Data de registo / Creation Date (dd/mm/yyyy)
+Email
+Nameserver

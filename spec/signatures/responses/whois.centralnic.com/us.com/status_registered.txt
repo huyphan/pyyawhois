@@ -1,0 +1,47 @@
+^Registrant Street2
+^Tech Email
+^Registrant Street1
+^Registrant Postal Code
+^Admin Country
+^Billing Country
+^Registrant Name
+^Admin Organization
+^Registrant FAX
+^DNSSEC
+^Tech Organization
+^Admin ID
+^Admin Name
+^Billing Street1
+^Billing Name
+^Billing Street2
+^Status
+^Billing Postal Code
+^Tech ID
+^Billing ID
+^Tech Country
+^Tech FAX
+^Tech Postal Code
+^Expiration Date
+^Registrant Email
+^Admin Postal Code
+^Admin Street2
+^Admin Street1
+^Admin Email
+^Domain ID
+^Billing FAX
+^Admin Phone
+^Registrant Phone
+^Billing Email
+^Tech Phone
+^Tech Name
+^Registrant ID
+^Billing Organization
+^Name Server
+^Last Updated On
+^Created On
+^Billing Phone
+^Tech Street2
+^Tech Street1
+^Registrant Country
+^Admin FAX
+^Domain Name

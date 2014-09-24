@@ -1,0 +1,35 @@
+^admin-street
+^owner-name
+^owner-zip
+^updated date
+^tech-organization
+^tech-zip
+^billing-city
+^tech-name
+^admin-zip
+^billing-name
+^billing-contact
+^tech-contact
+^owner-city
+^admin-country
+^billing-organization
+^expiration date
+^status
+^admin-contact
+^billing-street
+^billing-country
+^created date
+^tech-country
+^owner-street
+^tech-city
+^admin-city
+^owner-contact
+^url
+^admin-organization
+^billing-zip
+^tech-street
+^registrar
+^admin-name
+^owner-country
+^nameserver
+^domain name

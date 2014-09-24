@@ -1,0 +1,39 @@
+^Tech Email
+^Registrant Postal Code
+^Admin Country
+^Registrant Organization
+^Registrant Name
+^Admin Organization
+^Tech Street
+^Registrar Registration Expiration Date
+^Tech Name
+^Tech Organization
+^Admin Name
+^Registrar IANA ID
+^Admin Street
+^Creation Date
+^Updated Date
+^Admin City
+^% See http
+^Tech Country
+^Admin Fax
+^Tech Postal Code
+^Registrant Email
+^Admin Postal Code
+^Admin Email
+^Registrar URL
+^Admin Phone
+^Registrant Phone
+^Registrar
+^Tech Phone
+^Registrant Fax
+^Registrant City
+^Tech City
+^Name Server
+^Domain Status
+^Registrar WHOIS Server
+^Registrant Street
+^Registrar Abuse Contact Email
+^Registrant Country
+^Tech Fax
+^Domain Name

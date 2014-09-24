@@ -1,0 +1,11 @@
+^Domain Information:
+[Domain Name]
+[Network Service Name]
+[Organization Type]
+[Administrative Contact]
+[Technical Contact]
+[Name Server]
+[State]
+[Registered Date]
+[Connected Date]
+[Last Update]

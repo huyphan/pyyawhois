@@ -1,0 +1,12 @@
+^domain
+^changed
+^fax-no
+^e-mail
+^nserver
+^organisation
+^created
+^phone
+^contact
+^source
+^address
+^ds-rdata

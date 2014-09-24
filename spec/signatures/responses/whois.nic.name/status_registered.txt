@@ -1,0 +1,14 @@
+Admin ID
+Name Server
+Tech ID
+Registrant ID
+Domain Name ID
+Expires On
+Name Server ID
+Created On
+Sponsoring Registrar
+Updated On
+Billing ID
+Domain Status
+Domain Name
+Sponsoring Registrar ID

@@ -1,0 +1,51 @@
+^Billing Contact Email
+^Domain Registration Date
+^Billing Contact Postal Code
+^Administrative Contact Name
+^Registrant Postal Code
+^Administrative Contact Country Code
+^Registrant Name
+^Billing Contact Name
+^Sponsoring Registrar
+^Technical Contact City
+^Billing Contact Country Code
+^Domain Expiration Date
+^Billing Contact Phone Number
+^Billing Contact City
+^Technical Contact Address1
+^Registrar URL (registration services)
+^Technical Contact State/Province
+^Technical Contact ID
+^Technical Contact Country
+^Administrative Contact Phone Number
+^Last Updated by Registrar
+^Registrant Phone Number
+^Administrative Contact ID
+^Domain ID
+^Registrant Email
+^Administrative Contact State/Province
+^Technical Contact Email
+^Billing Contact State/Province
+^Technical Contact Postal Code
+^Domain Last Updated Date
+^Administrative Contact Country
+^Technical Contact Name
+^Registrant City
+^Administrative Contact Email
+^Registrant Country Code
+^Registrant State/Province
+^Technical Contact Country Code
+^Billing Contact ID
+^Registrant ID
+^Technical Contact Phone Number
+^Administrative Contact Postal Code
+^Name Server
+^Billing Contact Address1
+^Billing Contact Country
+^Domain Status
+^Administrative Contact Address1
+^Created by Registrar
+^Registrant Address1
+^Administrative Contact City
+^Registrant Country
+^Domain Name

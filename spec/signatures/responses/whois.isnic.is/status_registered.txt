@@ -1,0 +1,17 @@
+^billing-c
+^domain
+^zone-c
+^fax-no
+^descr
+^created
+^nserver
+^expires
+^tech-c
+^phone
+^source
+^person
+^role
+^nic-hdl
+^address
+^e-mail
+^admin-c

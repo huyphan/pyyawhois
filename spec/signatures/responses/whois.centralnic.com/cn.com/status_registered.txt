@@ -1,0 +1,57 @@
+^Registrant Street2
+^Sponsoring Registrar Website
+^Tech Email
+^Registrant Street1
+^Registrant Postal Code
+^Admin Country
+^Sponsoring Registrar Organization
+^Registrant Name
+^Admin Organization
+^Sponsoring Registrar IANA ID
+^Admin ID
+^DNSSEC
+^Tech Organization
+^Sponsoring Registrar Phone
+^Billing State/Province
+^Admin Name
+^Billing Name
+^Billing Street1
+^Sponsoring Registrar Street1
+^Status
+^Sponsoring Registrar Postal Code
+^Billing Postal Code
+^Tech ID
+^Sponsoring Registrar Country
+^Admin City
+^Billing ID
+^Tech Country
+^Tech FAX
+^Sponsoring Registrar City
+^Tech Postal Code
+^Expiration Date
+^Registrant Email
+^Admin Postal Code
+^Billing Country
+^Admin Street1
+^Admin Email
+^Domain ID
+^Billing FAX
+^Admin Phone
+^Registrant Phone
+^Sponsoring Registrar ID
+^Billing Email
+^Tech Phone
+^Tech Name
+^Registrant ID
+^Tech City
+^Sponsoring Registrar FAX
+^Billing Organization
+^Name Server
+^Billing City
+^Last Updated On
+^Created On
+^Billing Phone
+^Tech Street1
+^Registrant Country
+^Tech State/Province
+^Domain Name

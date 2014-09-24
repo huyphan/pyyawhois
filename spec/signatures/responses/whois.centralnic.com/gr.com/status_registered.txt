@@ -1,0 +1,11 @@
+^Status
+^Name Server
+^DNSSEC
+^Last Updated On
+^Tech ID
+^Created On
+^Domain ID
+^Billing ID
+^Domain Name
+^Registrant ID
+^Expiration Date

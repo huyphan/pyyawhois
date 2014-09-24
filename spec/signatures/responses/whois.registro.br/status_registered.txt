@@ -1,0 +1,23 @@
+^status
+^domain
+^saci
+^owner
+^ownerid
+^admin-c
+^dslastok
+^e-mail
+^dsstatus
+^nslastaa
+^nic-hdl-br
+^billing-c
+^% cert.br, http
+^owner-c
+^expires
+^nsstat
+^tech-c
+^created
+^nserver
+^country
+^changed
+^person
+^dsrecord

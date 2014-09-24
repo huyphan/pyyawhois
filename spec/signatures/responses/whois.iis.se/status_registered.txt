@@ -1,0 +1,14 @@
+^billing-c
+^status
+^domain
+^expires
+^dnssec
+^created
+^nserver
+^state
+^transferred
+^modified
+^tech-c
+^registrar
+^admin-c
+^holder

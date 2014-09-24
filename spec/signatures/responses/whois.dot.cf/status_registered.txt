@@ -1,0 +1,19 @@
+Owner contact
+Domain Nameservers
+Country
+Organization
+Domain registered
+Record will expire on
+Zipcode
+Fax
+E-mail
+Name
+City
+Tech contact
+Admin contact
+Record maintained by
+Billing contact
+Domain name
+State
+Address
+Phone

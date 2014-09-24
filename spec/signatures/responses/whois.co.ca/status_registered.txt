@@ -1,0 +1,8 @@
+^domain
+^ns1_netaddress
+^date_renewal
+^ns2_hostname
+^registrar
+^ns1_hostname
+^ns2_netaddress
+^date_approved

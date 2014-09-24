@@ -1,0 +1,17 @@
+^Domain Information
+[Domain Name]
+[Registrant]
+[Name Server]
+[Signing Key]                   
+[Created on]
+[Expires on]
+[Status]
+[Last Updated]
+Contact Information
+[Name]
+[Email]
+[Web Page]
+[Postal code]
+[Postal Address]
+[Phone]
+[Fax]

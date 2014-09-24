@@ -1,0 +1,15 @@
+^Name Server
+^WHOIS Server
+^DNSSEC
+^Domain Status
+^Creation Date
+^Domain ID
+^Billing ID
+^Sponsoring Registrar IANA ID
+^Sponsoring Registrar
+^Billing Email
+^Domain Name
+^Referral URL
+^Registrant ID
+^Registry Expiry Date
+^Registrant Email

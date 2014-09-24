@@ -1,0 +1,19 @@
+^option expiration date
+^option created
+^fax
+^handle
+^dnssec
+^created
+^nameservers
+^company
+^Registrant data available at http
+^phone
+^renewal date
+^last modified
+^registrant type
+^street
+^TECHNICAL CONTACT
+^location
+^REGISTRAR
+^city
+^DOMAIN NAME

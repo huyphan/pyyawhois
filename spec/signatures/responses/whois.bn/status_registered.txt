@@ -1,0 +1,12 @@
+^Domain
+^Name
+^Name Server 1
+^Created
+^Country
+^Contact Handle
+^Technical Contact
+^Last Updated
+^Administrative Contact
+^NS1 IP address
+^Domain Name
+^Email address

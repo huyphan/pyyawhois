@@ -1,0 +1,16 @@
+^Status
+^Name Server
+^Tech Contact Name
+^Tech Contact Email
+^Registrant Contact ID
+^Last Modified
+^Registrar ID
+^Registrar Name
+^Eligibility Name
+^Eligibility Type
+^Tech Contact ID
+^Registrant Contact Name
+^Registrant Contact Email
+^Eligibility ID
+^Registrant
+^Domain Name

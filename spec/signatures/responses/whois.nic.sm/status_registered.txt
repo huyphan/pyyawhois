@@ -1,0 +1,10 @@
+^Last Update
+^Status
+^Fax
+^DNS Servers
+^Phone
+^Technical Contact
+^Owner
+^Registration date
+^Email
+^Domain Name

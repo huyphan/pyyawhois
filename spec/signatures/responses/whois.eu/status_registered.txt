@@ -1,0 +1,10 @@
+^Name servers
+^Domain
+Name
+^Reseller
+^Technical
+^Registrant
+Website
+^Keys
+^Registrar
+^Onsite(s)

@@ -1,0 +1,13 @@
+^NIC Handle		
+^Phone			
+^Organization Name	
+^** Registrant
+^Fax			
+^** Administrative Contact
+^Created on
+^Expires on
+^** Billing Contact
+^** Domain Servers
+^** Additional Info
+^** Technical Contact
+^Address			

@@ -1,0 +1,18 @@
+Expiration Date
+Whois Server
+^Technical Contact
+Creation Date
+^Status
+^Creation Date
+^Administrative Contact
+^Expiration Date
+Name Server
+^Billing Contact
+Status
+Domain Name
+Updated Date
+Registrar
+^Domain servers in listed order
+Referral URL
+^Registrant
+^Domain Name
