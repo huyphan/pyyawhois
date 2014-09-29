@@ -48,6 +48,9 @@ def matches_asn(string):
     return re.compile("^as\d+$", re.I).match(string)
 
 def array_wrapper(obj):
+    if obj is None:
+        return []
+
     if isinstance(obj, list):
         return obj
 

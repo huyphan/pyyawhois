@@ -1,19 +1,42 @@
 from .parser.factory import ParserFactory
-from .parser import *
+from .utils import array_wrapper
 
-class Part(object):
+class SuperDict(object):
 
-    def __init__(self, body, host):
-        self.body = body
-        self.host = host
+    properties = []
 
-class Registrar(object):
+    def __init__(self, *args, **kwargs):
 
-    def __init__(self, id_, name, organization, url):
-        self.id   = id_
-        self.name = name
-        self.organization = organization
-        self.url  = url
+        for prop in self.properties:
+            setattr(self, prop, None)
+
+        for idx, prop in enumerate(args):
+            if idx > len(self.properties):
+                break
+            setattr(self, self.properties[idx], prop)
+
+        for k,v in kwargs.items():
+            setattr(self, k, v)
+
+class Contact(SuperDict):
+
+    TYPE_REGISTRANT     = 1
+    TYPE_ADMINISTRATIVE = 2
+    TYPE_TECHNICAL      = 3        
+
+    properties = ['id', 'type', 'name', 'organization',
+                    'address', 'city', 'zip', 'state', 'country', 'country_code',
+                    'phone', 'fax', 'email', 'url',
+                    'created_on', 'updated_on']
+
+class Part(SuperDict):
+    properties = ['body', 'host']
+
+class Registrar(SuperDict):
+    properties = ['id', 'name', 'organization', 'url']
+
+class Nameserver(SuperDict):
+    properties = ['name', 'ipv4', 'ipv6']
 
 class Record(object):
 
@@ -48,6 +71,8 @@ class Record(object):
         if attr in self.PROPERTIES or attr in self.METHODS:
             for parser in self.parsers:
                 if parser.is_property_supported(attr):
+                    if attr.endswith("contacts") or attr == "nameservers":
+                        return array_wrapper(getattr(parser, attr))
                     return getattr(parser, attr)
 
         return None
@@ -113,19 +138,28 @@ class Record(object):
     # @return [Boolean]
     #
     #
-    def is_response_incomplete(self):
-        return self.parser.is_response_incomplete()
+    @property
+    def response_incomplete(self):
+        for parser in self.parsers:
+            if parser.is_property_supported("response_incomplete"):
+                return parser.response_incomplete
 
     # Checks whether this is a throttle response.
     #
     # @return [Boolean]
     #
-    def is_response_throttled(self):
-        return self.parser.response_throttled()
+    @property
+    def response_throttled(self):
+        for parser in self.parsers:
+            if parser.is_property_supported("response_throttled"):
+                return parser.response_throttled
 
     # Checks whether this is an unavailable response.
     #
     # @return [Boolean]
     #
-    def is_response_unavailable(self):
-        return self.parser.response_unavailable()
+    @property
+    def response_unavailable(self):
+        for parser in self.parsers:
+            if parser.is_property_supported("response_unavailable"):
+                return parser.response_unavailable

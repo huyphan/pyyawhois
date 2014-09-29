@@ -27,7 +27,7 @@ class ScannableParserBase(ParserBase):
         if self._ast is None:
             self._ast = self.parse()
 
-        return self._ast[key]
+        return self._ast.get(key)
 
     def parse(self):
         if isinstance(self._scanner, (list, tuple)):

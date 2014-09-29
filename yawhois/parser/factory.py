@@ -57,8 +57,8 @@ class ParserFactory(object):
     @staticmethod
     def parser_class(host):
         module_name, class_name = ParserFactory.host_to_parser(host)
-        module = getattr(__import__("", globals(), fromlist=["parser"]), module_name)
-        return getattr(module, class_name)
+        _temp = __import__(module_name, globals(), locals(), [class_name], -1)
+        return getattr(_temp, class_name)
 
     @staticmethod
     def host_to_parser(host):

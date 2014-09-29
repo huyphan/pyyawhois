@@ -129,13 +129,13 @@ class ScannerBase(object):
 
             return True
 
-    def __scan_lines_to_array(self, pattern):
+    def _scan_lines_to_array(self, pattern):
         results = []
         while self._input.scan(pattern):
             results.append(self._input.results[1].strip())
         return results
 
-    def __scan_lines_to_hash(self, pattern):
+    def _scan_lines_to_hash(self, pattern):
         results = []
         while self._input.scan(pattern):
             key, value = self._input.results[1], self._input.results[2]

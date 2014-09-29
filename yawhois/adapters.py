@@ -7,7 +7,6 @@ BUFFER_SIZE = 1024
 DEFAULT_WHOIS_PORT = 43
 DEFAULT_BIND_HOST = "0.0.0.0"
 
-
 class SocketHandler(object):
     '''
     The SocketHandler is the default query handler provided with the
@@ -30,7 +29,7 @@ class SocketHandler(object):
     def call(self, query, server, port):
         try:
             return self.execute(query, server, port)
-        except Excpetion, e:
+        except Exception, e:
             raise ConnectionError("%s") % (e)
 
     # Executes the low-level Socket connection.

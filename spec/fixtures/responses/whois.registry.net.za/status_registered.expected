@@ -6,7 +6,7 @@
   %s == "google.co.za"
 
 #domain_id
-  %s raise_error Whois::AttributeNotSupported
+  %s %ERROR{AttributeNotSupported}
 
 
 #status
@@ -23,7 +23,7 @@
   %s %TIME{2001-06-25}
 
 #updated_on
-  %s raise_error Whois::AttributeNotSupported
+  %s %ERROR{AttributeNotSupported}
 
 #expires_on
   %s %TIME{2014-06-25}
@@ -56,10 +56,10 @@
   %s[0].updated_on    == nil
 
 #admin_contacts
-  %s raise_error Whois::AttributeNotSupported
+  %s %ERROR{AttributeNotSupported}
 
 #technical_contacts
-  %s raise_error Whois::AttributeNotSupported
+  %s %ERROR{AttributeNotSupported}
 
 
 #nameservers

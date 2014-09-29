@@ -1,7 +1,8 @@
 from .base_scannable import ScannableParserBase
 from ..scanner.base_icann_compliant import BaseIcannCompliantScanner
 from ..utils import array_wrapper
-from dateutil import parser
+from ..record import *
+from dateutil import parser as timeparser
 
 class BaseIcannCompliantParser(ScannableParserBase):
 
@@ -34,19 +35,19 @@ class BaseIcannCompliantParser(ScannableParserBase):
     def created_on(self):
         value = self.node('Creation Date')
         if value:
-            return parser.parse(value)
+            return timeparser.parse(value)
     
     @property
     def created_on(self):
         value = self.node('Updated Date')
         if value:
-            return parser.parse(value)
+            return timeparser.parse(value)
 
     @property
     def expires_on(self):
         value = self.node('Registrar Registration Expiration Date')
         if value:
-            return parser.parse(value)
+            return timeparser.parse(value)
 
     @property
     def registrar(self):
