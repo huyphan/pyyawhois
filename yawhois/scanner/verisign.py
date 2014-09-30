@@ -37,14 +37,17 @@ class VerisignScanner(ScannerBase):
     def scan_available(self):
         if self._input.scan('No match for "(.+?)"\.\n'):
             self._ast["Domain Name"] = self._input.results[1].strip()
+            return True
 
     def scan_disclaimer(self):
         if self._input.match("^TERMS OF USE:"):
             self._ast["Disclaimer"] = " ".join(self._scan_lines_to_array("(.+)\n"))
+            return True
 
     def scan_notice(self):
         if self._input.match("^NOTICE:"):
             self._ast["Notice"] = " ".join(self._scan_lines_to_array("(.+)\n"))
+            return True
 
     def scan_keyvalue_indented(self):
         if self._input.scan("\s+(.+?):(.*?)\n"):
@@ -55,12 +58,13 @@ class VerisignScanner(ScannerBase):
                 if not isinstance(self._ast.get(key), list):
                     self._ast[key] = [self._ast[key]]
                 self._ast[key].append(value)
+            return True
 
     def skip_lastupdate(self):
-        self._input.skip(">>>(.+?)<<<\n")
+        return self._input.skip(">>>(.+?)<<<\n")
 
     def skip_fuffa(self):
-        self._input.scan("^\S(.+)(?:\n|\z)")
+        return self._input.scan("^\S(.+)(?:\n|\z)")
 
     def skip_ianaservice(self):
         if self._input.match("IANA Whois Service"):

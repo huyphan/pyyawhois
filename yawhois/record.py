@@ -51,7 +51,8 @@ class Record(object):
         'created_on', 'updated_on', 'expires_on',
         'registrar',
         'registrant_contacts', 'admin_contacts', 'technical_contacts',
-        'nameservers'
+        'nameservers',
+        'referral_url', 'referral_whois', 
     ]
 
     # Initializes a new instance with given server and parts
