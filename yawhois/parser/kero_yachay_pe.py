@@ -1,5 +1,6 @@
 from .base import ParserBase
 from ..exceptions import ResponseError, ParserError
+from ..record import Nameserver
 import re
 
 class KeroYachayPeParser(ParserBase):
@@ -35,14 +36,14 @@ class KeroYachayPeParser(ParserBase):
 
     @property
     def registered(self):
-        return self.status == "registered"
+        return not self.available
 
     @property
     def nameservers(self):
         match = re.compile("Name Servers:\n((.+\n)+)\n", re.M).search(self.content_for_scanner)
         if match:
             content = match.group(1)
-            return [{'name': name.strip()} for name in content.split("\n")]
+            return [Nameserver(name = name.lower().strip()) for name in filter(None, content.split("\n"))]
 
     @property
     def response_throttled(self):
