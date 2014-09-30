@@ -38,7 +38,7 @@ class BaseIcannCompliantParser(ScannableParserBase):
             return timeparser.parse(value)
     
     @property
-    def created_on(self):
+    def updated_on(self):
         value = self.node('Updated Date')
         if value:
             return timeparser.parse(value)

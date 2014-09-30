@@ -67,10 +67,10 @@ class StringScanner(object):
 
     def scan_until(self, pattern, flags = 0):
         if self.check_until(pattern, flags):
-            self._offset += len(self.results)
-            return True
+            self._offset += len(self.results[0])
+            return self.results
 
-        return False
+        return None
 
     def remaining(self):
         return self._input[self._offset:]
@@ -112,9 +112,8 @@ class ScannerBase(object):
         return self._input.skip("\n")
 
     def scan_keyvalue(self):
-        if self._input.scan("(.+?):(.*?)(\n|\z)"):
+        if self._input.scan("(.+?):(.*?)(\n|\Z)"):
             key, value = self._input.results[1].strip(), self._input.results[2].strip()
-
             if self._tmp.get("_section"):
                 target = self._ast[self._tmp.get("_section")] or {}
             else:
@@ -126,7 +125,6 @@ class ScannerBase(object):
                 target[key].append(value)
             else:
                 target[key] = [target[key], value]
-
             return True
 
     def _scan_lines_to_array(self, pattern):
