@@ -10,7 +10,8 @@ class BaseIcannCompliantParser(ScannableParserBase):
 
     @property
     def domain(self):
-        return self.node('Domain Name').lower()
+        if self.node('Domain Name'):
+            return self.node('Domain Name').lower()
 
     @property
     def domain_id(self):
@@ -25,7 +26,7 @@ class BaseIcannCompliantParser(ScannableParserBase):
 
     @property
     def available(self):
-        return bool(self.get('status:available'))
+        return bool(self.node('status:available'))
 
     @property
     def registered(self):
@@ -52,28 +53,30 @@ class BaseIcannCompliantParser(ScannableParserBase):
     @property
     def registrar(self):
         value = self.node('Registrar')
-        return Registrar(node('Registrar IANA ID'), node('Registrar'), node('Registrar'), node('Registrar URL'))
+        if value:
+            return Registrar(self.node('Registrar IANA ID'), self.node('Registrar'), self.node('Registrar'), self.node('Registrar URL'))
 
     @property
     def registrant_contacts(self):
-        return array_wrapper(self._build_contact('Registrant'))
+        return array_wrapper(self._build_contact('Registrant', Contact.TYPE_REGISTRANT))
 
     @property
     def admin_contacts(self):
-        return array_wrapper(self._build_contact('Admin'))
+        return array_wrapper(self._build_contact('Admin', Contact.TYPE_ADMINISTRATIVE))
 
     @property
     def technical_contacts(self):
-        return array_wrapper(self._build_contact('Tech'))
+        return array_wrapper(self._build_contact('Tech', Contact.TYPE_TECHNICAL))
 
     @property
     def nameservers(self):
-        return [{'name': name} for name in filter(None, array_wrapper(self.node("Name Server")) or self.node('Name Servers'))]
+        return [Nameserver(name = name) for name in filter(None, array_wrapper(self.node("Name Server") or self.node('Name Servers')))]
 
-    def _build_contact(self, element):
+    def _build_contact(self, element, type_):
         if self.node("%s Name" % element):
-            return {
+            return Contact(**{
                 'id'           : self.node("Registry %s ID" % element),
+                'type'         : type_,
                 'name'         : self._value_for_property(element, 'Name'),
                 'organization' : self._value_for_property(element, 'Organization'),
                 'address'      : self._value_for_property(element, 'Street'),
@@ -84,7 +87,7 @@ class BaseIcannCompliantParser(ScannableParserBase):
                 'phone'        : self._value_for_property(element, 'Phone'),
                 'fax'          : self._value_for_property(element, 'Fax'),
                 'email'        : self._value_for_property(element, 'Email')
-            }
+            })
 
     def _value_for_phone_property(self, element, prop):
         return " ext: ".join(filter(None,[value_for_property(element, prop), value_for_property(element, prop + " Ext")] ))

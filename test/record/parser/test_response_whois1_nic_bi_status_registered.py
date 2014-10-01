@@ -58,7 +58,7 @@ class TestWhois1NicBiStatusRegistered(object):
 
     def test_updated_on(self):
         eq_(self.record.updated_on.__class__.__name__, 'datetime')
-        eq_(self.record.updated_on, time_parse('2013-12-05 07:16:04 UTC'))
+        eq_(self.record.updated_on, time_parse('2013-12-05 07:16:04.538 UTC'))
 
     def test_domain_id(self):
         eq_(self.record.domain_id, "2633NIC-BI")

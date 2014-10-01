@@ -45,12 +45,13 @@ class BaseCocca2Parser(ScannableParserBase):
     @property
     def updated_on(self):
         value = self.node('Updated Date')
+        print value
         if value:
             return timeparser.parse(value)
 
     @property
     def expires_on(self):
-        value = self.node('Registrar Expiry Date')
+        value = self.node('Registry Expiry Date')
         if value:
             return timeparser.parse(value)
 
@@ -58,9 +59,9 @@ class BaseCocca2Parser(ScannableParserBase):
     def registrar(self):
         if self.node("Sponsoring Registrar"):
             return Registrar(
-                id   = self.node("Sponsoring Registrar IANA ID") or "",
-                name = self.node("Sponsoring Registrar") or "",
-                url  = self.node("Sponsoring Registrar URL") or "",
+                id   = self.node("Sponsoring Registrar IANA ID") or None,
+                name = self.node("Sponsoring Registrar"),
+                url  = self.node("Sponsoring Registrar URL") or None,
             )
 
     @property
