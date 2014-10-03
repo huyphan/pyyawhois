@@ -45,7 +45,6 @@ class BaseCocca2Parser(ScannableParserBase):
     @property
     def updated_on(self):
         value = self.node('Updated Date')
-        print value
         if value:
             return timeparser.parse(value)
 
