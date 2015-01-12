@@ -119,12 +119,14 @@ class ScannerBase(object):
             else:
                 target = self._ast
 
-            if not target.has_key(key):
-                target[key] = value
-            elif isinstance(target[key], list):
-                target[key].append(value)
-            else:
-                target[key] = [target[key], value]
+            if value:
+                if not target.has_key(key):
+                    target[key] = value
+                elif isinstance(target[key], list):
+                    target[key].append(value)
+                else:
+                    target[key] = [target[key], value]
+
             return True
 
     def _scan_lines_to_array(self, pattern):
