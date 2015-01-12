@@ -88,9 +88,9 @@ class TestWhoisWildwestdomainsComStatusRegistered(object):
         eq_(self.record.registrant_contacts[0].state, "Arizona")
         eq_(self.record.registrant_contacts[0].country, None)
         eq_(self.record.registrant_contacts[0].country_code, "United States")
-        eq_(self.record.registrant_contacts[0].phone, "")
-        eq_(self.record.registrant_contacts[0].fax, "")
-        eq_(self.record.registrant_contacts[0].email, "")
+        eq_(self.record.registrant_contacts[0].phone, None)
+        eq_(self.record.registrant_contacts[0].fax, None)
+        eq_(self.record.registrant_contacts[0].email, None)
         eq_(self.record.registrant_contacts[0].created_on, None)
         eq_(self.record.registrant_contacts[0].updated_on, None)
 

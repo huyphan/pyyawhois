@@ -50,7 +50,7 @@ class TestWhoisDreamhostComStatusRegistered(object):
         eq_(self.record.admin_contacts[0].state, "CA")
         eq_(self.record.admin_contacts[0].country_code, "US")
         eq_(self.record.admin_contacts[0].phone, "+1.7147064182")
-        eq_(self.record.admin_contacts[0].fax, "")
+        eq_(self.record.admin_contacts[0].fax, None)
         eq_(self.record.admin_contacts[0].email, "YW3GAZMC77BTMTF@PROXY.DREAMHOST.COM")
 
     def test_registered(self):
@@ -80,7 +80,7 @@ class TestWhoisDreamhostComStatusRegistered(object):
         eq_(self.record.registrant_contacts[0].state, "CA")
         eq_(self.record.registrant_contacts[0].country_code, "US")
         eq_(self.record.registrant_contacts[0].phone, "+1.7147064182")
-        eq_(self.record.registrant_contacts[0].fax, "")
+        eq_(self.record.registrant_contacts[0].fax, None)
         eq_(self.record.registrant_contacts[0].email, "YW3GAZMC77BTMTF@PROXY.DREAMHOST.COM")
 
     def test_technical_contacts(self):
@@ -96,7 +96,7 @@ class TestWhoisDreamhostComStatusRegistered(object):
         eq_(self.record.technical_contacts[0].state, "CA")
         eq_(self.record.technical_contacts[0].country_code, "US")
         eq_(self.record.technical_contacts[0].phone, "+1.7147064182")
-        eq_(self.record.technical_contacts[0].fax, "")
+        eq_(self.record.technical_contacts[0].fax, None)
         eq_(self.record.technical_contacts[0].email, "YW3GAZMC77BTMTF@PROXY.DREAMHOST.COM")
 
     def test_updated_on(self):

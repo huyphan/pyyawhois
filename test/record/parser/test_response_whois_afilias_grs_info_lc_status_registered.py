@@ -52,7 +52,7 @@ class TestWhoisAfiliasGrsInfoLcStatusRegistered(object):
         eq_(self.record.admin_contacts[0].state, "Not Provided")
         eq_(self.record.admin_contacts[0].country_code, "LC")
         eq_(self.record.admin_contacts[0].phone, "+758.4520220")
-        eq_(self.record.admin_contacts[0].fax, "")
+        eq_(self.record.admin_contacts[0].fax, None)
         eq_(self.record.admin_contacts[0].email, "hostmaster@nic.lc")
 
     def test_registered(self):
@@ -83,7 +83,7 @@ class TestWhoisAfiliasGrsInfoLcStatusRegistered(object):
         eq_(self.record.registrant_contacts[0].state, "Not Provided")
         eq_(self.record.registrant_contacts[0].country_code, "LC")
         eq_(self.record.registrant_contacts[0].phone, "+758.4520220")
-        eq_(self.record.registrant_contacts[0].fax, "")
+        eq_(self.record.registrant_contacts[0].fax, None)
         eq_(self.record.registrant_contacts[0].email, "nic@nic.lc")
 
     def test_technical_contacts(self):
@@ -100,7 +100,7 @@ class TestWhoisAfiliasGrsInfoLcStatusRegistered(object):
         eq_(self.record.technical_contacts[0].state, "Not Provided")
         eq_(self.record.technical_contacts[0].country_code, "LC")
         eq_(self.record.technical_contacts[0].phone, "+758.4520220")
-        eq_(self.record.technical_contacts[0].fax, "")
+        eq_(self.record.technical_contacts[0].fax, None)
         eq_(self.record.technical_contacts[0].email, "technical@nic.lc")
 
     def test_updated_on(self):

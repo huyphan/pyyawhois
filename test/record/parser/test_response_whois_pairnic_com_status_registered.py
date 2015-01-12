@@ -82,9 +82,9 @@ class TestWhoisPairnicComStatusRegistered(object):
         eq_(self.record.registrant_contacts[0].zip, "15203")
         eq_(self.record.registrant_contacts[0].state, "PA")
         eq_(self.record.registrant_contacts[0].country_code, "US")
-        eq_(self.record.registrant_contacts[0].phone, "")
-        eq_(self.record.registrant_contacts[0].fax, "")
-        eq_(self.record.registrant_contacts[0].email, "")
+        eq_(self.record.registrant_contacts[0].phone, None)
+        eq_(self.record.registrant_contacts[0].fax, None)
+        eq_(self.record.registrant_contacts[0].email, None)
 
     def test_technical_contacts(self):
         eq_(self.record.technical_contacts.__class__.__name__, 'list')

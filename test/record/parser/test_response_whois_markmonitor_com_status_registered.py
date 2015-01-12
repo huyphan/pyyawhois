@@ -123,7 +123,7 @@ class TestWhoisMarkmonitorComStatusRegistered(object):
         eq_(self.record.updated_on, time_parse('2013-10-29 11:50:06 -0700'))
 
     def test_domain_id(self):
-        eq_(self.record.domain_id, "")
+        eq_(self.record.domain_id, None)
 
     def test_expires_on(self):
         eq_(self.record.expires_on.__class__.__name__, 'datetime')

@@ -134,6 +134,9 @@ def translate_expected_value(value):
     if value == 'Whois::Record::Contact::TYPE_TECHNICAL':
         return 'yawhois.record.Contact.TYPE_TECHNICAL'
 
+    if value == '""':
+        return 'None'
+
     if value.startswith(':'):
         return "'%s'" % value.strip(":")
 

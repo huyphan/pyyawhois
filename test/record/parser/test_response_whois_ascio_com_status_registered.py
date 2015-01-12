@@ -84,9 +84,9 @@ class TestWhoisAscioComStatusRegistered(object):
         eq_(self.record.registrant_contacts[0].zip, "2300")
         eq_(self.record.registrant_contacts[0].state, "S")
         eq_(self.record.registrant_contacts[0].country_code, "DK")
-        eq_(self.record.registrant_contacts[0].phone, "")
-        eq_(self.record.registrant_contacts[0].fax, "")
-        eq_(self.record.registrant_contacts[0].email, "")
+        eq_(self.record.registrant_contacts[0].phone, None)
+        eq_(self.record.registrant_contacts[0].fax, None)
+        eq_(self.record.registrant_contacts[0].email, None)
 
     def test_technical_contacts(self):
         eq_(self.record.technical_contacts.__class__.__name__, 'list')
@@ -98,7 +98,7 @@ class TestWhoisAscioComStatusRegistered(object):
         eq_(self.record.technical_contacts[0].address, "3rd Floor Prospero House, 241 Borough High St.")
         eq_(self.record.technical_contacts[0].city, "London")
         eq_(self.record.technical_contacts[0].zip, "SE1 1GA")
-        eq_(self.record.technical_contacts[0].state, "")
+        eq_(self.record.technical_contacts[0].state, None)
         eq_(self.record.technical_contacts[0].country_code, "GB")
         eq_(self.record.technical_contacts[0].phone, "+44.2070159370")
         eq_(self.record.technical_contacts[0].fax, "+44.2070159375")
@@ -109,7 +109,7 @@ class TestWhoisAscioComStatusRegistered(object):
         eq_(self.record.updated_on, time_parse('2013-06-02 00:23:21 UTC'))
 
     def test_domain_id(self):
-        eq_(self.record.domain_id, "")
+        eq_(self.record.domain_id, None)
 
     def test_expires_on(self):
         eq_(self.record.expires_on.__class__.__name__, 'datetime')

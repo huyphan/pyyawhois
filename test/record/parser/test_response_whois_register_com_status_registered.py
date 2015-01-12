@@ -59,7 +59,7 @@ class TestWhoisRegisterComStatusRegistered(object):
         eq_(self.record.admin_contacts[0].state, "NY")
         eq_(self.record.admin_contacts[0].country_code, "US")
         eq_(self.record.admin_contacts[0].phone, "+1.9027492701")
-        eq_(self.record.admin_contacts[0].fax, "")
+        eq_(self.record.admin_contacts[0].fax, None)
         eq_(self.record.admin_contacts[0].email, "domainregistrar@register.com")
 
     def test_registered(self):
@@ -88,7 +88,7 @@ class TestWhoisRegisterComStatusRegistered(object):
         eq_(self.record.registrant_contacts[0].state, "NY")
         eq_(self.record.registrant_contacts[0].country_code, "US")
         eq_(self.record.registrant_contacts[0].phone, "+1.9027492701")
-        eq_(self.record.registrant_contacts[0].fax, "")
+        eq_(self.record.registrant_contacts[0].fax, None)
         eq_(self.record.registrant_contacts[0].email, "domainregistrar@register.com")
 
     def test_technical_contacts(self):
@@ -104,7 +104,7 @@ class TestWhoisRegisterComStatusRegistered(object):
         eq_(self.record.technical_contacts[0].state, "NY")
         eq_(self.record.technical_contacts[0].country_code, "US")
         eq_(self.record.technical_contacts[0].phone, "+1.9027492701")
-        eq_(self.record.technical_contacts[0].fax, "")
+        eq_(self.record.technical_contacts[0].fax, None)
         eq_(self.record.technical_contacts[0].email, "domainregistrar@register.com")
 
     def test_updated_on(self):
@@ -112,7 +112,7 @@ class TestWhoisRegisterComStatusRegistered(object):
         eq_(self.record.updated_on, time_parse('2009-08-26T00:00:00-0400'))
 
     def test_domain_id(self):
-        eq_(self.record.domain_id, "")
+        eq_(self.record.domain_id, None)
 
     def test_expires_on(self):
         eq_(self.record.expires_on.__class__.__name__, 'datetime')
