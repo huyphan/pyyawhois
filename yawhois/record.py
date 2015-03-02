@@ -53,6 +53,7 @@ class Record(object):
         'registrant_contacts', 'admin_contacts', 'technical_contacts',
         'nameservers',
         'referral_url', 'referral_whois', 
+        'valid', 'invalid'
     ]
 
     # Initializes a new instance with given server and parts

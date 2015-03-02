@@ -15,27 +15,27 @@ class StringScanner(object):
     def eos(self):
         return self._offset >= len(self._input)
 
-    def _search(self, pattern, flags = 0):
+    def _search(self, pattern, flags = re.MULTILINE):
         pattern = re.compile(pattern, flags)
         match   = pattern.search(self.buffer)
         return match
 
-    def _search_from_start(self, pattern, flags = 0):
+    def _search_from_start(self, pattern, flags = re.MULTILINE):
         return self._search("\A" + pattern, flags)
 
-    def match(self, pattern, flags = 0):
+    def match(self, pattern, flags = re.MULTILINE):
         match = self._search_from_start(pattern, flags)
         if match is not None:
             return len(match.group())
       
-    def skip(self, pattern, flags = 0):
+    def skip(self, pattern, flags = re.MULTILINE):
         match = self._search_from_start(pattern, flags)
         if match is not None:
             old_offset    = self._offset
             self._offset += match.end()
             return self._offset - old_offset
 
-    def scan(self, pattern, flags = 0):
+    def scan(self, pattern, flags = re.MULTILINE):
         match = self._search_from_start(pattern, flags)
 
         if match is not None:
@@ -47,7 +47,7 @@ class StringScanner(object):
         self.results = []
         return False
 
-    def skip_until(self, pattern, flags = 0):
+    def skip_until(self, pattern, flags = re.MULTILINE):
         match = self._search(pattern, flags)
         if match is not None:
             self._offset += match.end()
@@ -55,7 +55,7 @@ class StringScanner(object):
 
         return None
 
-    def check_until(self, pattern, flags = 0):
+    def check_until(self, pattern, flags = re.MULTILINE):
         match = self._search(pattern, flags)
 
         if match is not None:
@@ -65,7 +65,7 @@ class StringScanner(object):
         self.results = []
         return False
 
-    def scan_until(self, pattern, flags = 0):
+    def scan_until(self, pattern, flags = re.MULTILINE):
         if self.check_until(pattern, flags):
             self._offset += len(self.results[0])
             return self.results
@@ -85,10 +85,9 @@ class StringScanner(object):
 
 class ScannerBase(object):
 
-    _tokenizer = []
-
     def __init__(self, settings = None):
-        self._settings = settings or {}
+        self._settings  = settings or {}
+        self._tokenizer = []
 
     def parse(self, content):
         self._tmp = {}
@@ -158,10 +157,9 @@ class ScannerBase(object):
         for tokenizer in self._tokenizer:
             if hasattr(self, tokenizer):
                 r = getattr(self, tokenizer)()
-                # print tokenizer, r
                 if r:
                     return
-
+        
         self.error("Unexpected token")
 
     def error(self, message):
