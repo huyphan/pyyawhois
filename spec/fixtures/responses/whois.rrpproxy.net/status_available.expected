@@ -22,7 +22,7 @@
   %s == nil
 
 #expires_on
-  %s == nil
+  %s %ERROR{AttributeNotSupported}
 
 
 #registrar

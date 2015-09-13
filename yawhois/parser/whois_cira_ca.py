@@ -1,9 +1,7 @@
 from .base_scannable import ScannableParserBase
 from ..scanner.whois_cira_ca import WhoisCiraCaScanner
 from ..utils import array_wrapper
-from ..record import Nameserver
-from ..record import Contact
-from ..record import Registrar
+from ..record import Nameserver, Contact, Registrar
 from ..exceptions import ParserError
 from dateutil import parser as time_parser
 import re
@@ -15,7 +13,6 @@ class WhoisCiraCaParser(ScannableParserBase):
     @property
     def disclaimer(self):
         return self.node("field:disclaimer")
-
 
     @property
     def domain(self):
@@ -93,7 +90,12 @@ class WhoisCiraCaParser(ScannableParserBase):
     def nameservers(self):
         nameservers = []
         for nameserver in array_wrapper(self.node("field:nameservers")):
-            name, ipv4 = re.split("/\s+", nameserver)
+            _tmp = re.split("/\s+", nameserver)
+            if len(_tmp) == 1:
+                name = _tmp[0]
+                ipv4 = None
+            else:
+                name, ipv4 = _tmp
             nameservers.append(Nameserver(name = name, ipv4 = ipv4))
         return nameservers
 
@@ -126,17 +128,17 @@ class WhoisCiraCaParser(ScannableParserBase):
 
     def _build_contact(self, element, type_):
         if self.node(element):
-            return Record(**{
+            return Contact(**{
                 'type'         : type_,
                 'id'           : None,
-                'name'         : self.node(element)["Name"],
+                'name'         : self.node(element).get("Name"),
                 'organization' : None,
-                'address'      : self.node(element)["Postal address"],
+                'address'      : self.node(element).get("Postal address"),
                 'city'         : None,
                 'zip'          : None,
                 'state'        : None,
                 'country'      : None,
-                'phone'        : self.node(element)["Phone"],
-                'fax'          : self.node(element)["Fax"],
-                'email'        : self.node(element)["Email"]
+                'phone'        : self.node(element).get("Phone"),
+                'fax'          : self.node(element).get("Fax"),
+                'email'        : self.node(element).get("Email")
             })

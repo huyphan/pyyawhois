@@ -40,7 +40,7 @@ class WhoisCiraCaScanner(ScannerBase):
                     del self._tmp["group"]
                 target = self._ast
 
-            more  = self._scan_lines_to_array("^\s{#{start.size}}(.+)\n")
+            more  = self._scan_lines_to_array("^\s{%d}(.+)\n" % len(start))
             if len(more) != 0:
                 more.insert(0, value)
                 value = "\n".join(more)
@@ -55,7 +55,7 @@ class WhoisCiraCaScanner(ScannerBase):
 
     def scan_nameserver(self):
         if self._input.scan("^\s+(.+?)\n") and self._tmp["group"] == "Name servers":
-            self._ast["field:nameservers"] = self._ast["field:nameservers"] or []
+            self._ast["field:nameservers"] = self._ast.get("field:nameservers") or []
             self._ast["field:nameservers"].append(self._input.results[1].strip())
             return True
 

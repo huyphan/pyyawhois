@@ -37,9 +37,9 @@ class TestWhoisCnnicCnStatusRegistered(object):
         eq_(self.record.nameservers.__class__.__name__, 'list')
         eq_(len(self.record.nameservers), 4)
         eq_(self.record.nameservers[0].__class__.__name__, 'Nameserver')
-        eq_(self.record.nameservers[0].name, "ns2.google.com")
+        eq_(self.record.nameservers[0].name, "ns1.google.com")
         eq_(self.record.nameservers[1].__class__.__name__, 'Nameserver')
-        eq_(self.record.nameservers[1].name, "ns1.google.com")
+        eq_(self.record.nameservers[1].name, "ns2.google.com")
         eq_(self.record.nameservers[2].__class__.__name__, 'Nameserver')
         eq_(self.record.nameservers[2].name, "ns3.google.com")
         eq_(self.record.nameservers[3].__class__.__name__, 'Nameserver')
@@ -82,7 +82,7 @@ class TestWhoisCnnicCnStatusRegistered(object):
 
     def test_expires_on(self):
         eq_(self.record.expires_on.__class__.__name__, 'datetime')
-        eq_(self.record.expires_on, time_parse('2014-03-17 12:48:36'))
+        eq_(self.record.expires_on, time_parse('2017-03-17 12:48:36'))
 
     def test_disclaimer(self):
         assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.disclaimer)

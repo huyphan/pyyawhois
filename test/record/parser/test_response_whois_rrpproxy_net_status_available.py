@@ -62,4 +62,4 @@ class TestWhoisRrpproxyNetStatusAvailable(object):
         eq_(self.record.domain_id, None)
 
     def test_expires_on(self):
-        eq_(self.record.expires_on, None)
+        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.expires_on)

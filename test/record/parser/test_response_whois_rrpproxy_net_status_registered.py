@@ -124,5 +124,4 @@ class TestWhoisRrpproxyNetStatusRegistered(object):
         eq_(self.record.domain_id, "334322677_DOMAIN_COM-VRSN")
 
     def test_expires_on(self):
-        eq_(self.record.expires_on.__class__.__name__, 'datetime')
-        eq_(self.record.expires_on, time_parse('2015-02-03 19:44:56 UTC'))
+        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.expires_on)

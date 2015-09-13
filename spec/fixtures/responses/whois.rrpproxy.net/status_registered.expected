@@ -24,8 +24,7 @@
   %s %TIME{2014-02-04 08:34:14 UTC}
 
 #expires_on
-  %s %CLASS{time}
-  %s %TIME{2015-02-03 19:44:56 UTC}
+  %s %ERROR{AttributeNotSupported}
 
 
 #registrar

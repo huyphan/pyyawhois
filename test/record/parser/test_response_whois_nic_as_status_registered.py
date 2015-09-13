@@ -27,9 +27,6 @@ class TestWhoisNicAsStatusRegistered(object):
     def test_available(self):
         eq_(self.record.available, False)
 
-    def test_domain(self):
-        eq_(self.record.domain, "google.as")
-
     def test_nameservers(self):
         eq_(self.record.nameservers.__class__.__name__, 'list')
         eq_(len(self.record.nameservers), 4)
@@ -50,22 +47,10 @@ class TestWhoisNicAsStatusRegistered(object):
         eq_(self.record.registered, True)
 
     def test_created_on(self):
-        eq_(self.record.created_on.__class__.__name__, 'datetime')
-        eq_(self.record.created_on, time_parse('2000-08-02 00:00:00 UTC'))
-
-    def test_registrar(self):
-        eq_(self.record.registrar.__class__.__name__, 'Registrar')
-        eq_(self.record.registrar.id, None)
-        eq_(self.record.registrar.name, "MarkMonitor Inc.")
-        eq_(self.record.registrar.organization, None)
-        eq_(self.record.registrar.url, None)
+        eq_(self.record.created_on, None)
 
     def test_updated_on(self):
-        eq_(self.record.updated_on, None)
-
-    def test_domain_id(self):
-        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.domain_id)
+        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.updated_on)
 
     def test_expires_on(self):
-        eq_(self.record.expires_on.__class__.__name__, 'datetime')
-        eq_(self.record.expires_on, time_parse('2014-08-02 00:00:00 UTC'))
+        eq_(self.record.expires_on, None)

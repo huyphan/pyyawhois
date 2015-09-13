@@ -27,9 +27,6 @@ class TestWhoisNicAsStatusAvailable(object):
     def test_available(self):
         eq_(self.record.available, True)
 
-    def test_domain(self):
-        eq_(self.record.domain, "u34jedzcq.as")
-
     def test_nameservers(self):
         eq_(self.record.nameservers.__class__.__name__, 'list')
         eq_(self.record.nameservers, [])
@@ -40,14 +37,8 @@ class TestWhoisNicAsStatusAvailable(object):
     def test_created_on(self):
         eq_(self.record.created_on, None)
 
-    def test_registrar(self):
-        eq_(self.record.registrar, None)
-
     def test_updated_on(self):
-        eq_(self.record.updated_on, None)
-
-    def test_domain_id(self):
-        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.domain_id)
+        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.updated_on)
 
     def test_expires_on(self):
         eq_(self.record.expires_on, None)

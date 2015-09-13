@@ -34,7 +34,7 @@ class TestWhoisRegistryNetZaStatusAvailable(object):
         eq_(self.record.nameservers, [])
 
     def test_admin_contacts(self):
-        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.admin_contacts)
+        eq(self.record.admin_contacts, None)
 
     def test_registered(self):
         eq_(self.record.registered, False)
@@ -49,13 +49,13 @@ class TestWhoisRegistryNetZaStatusAvailable(object):
         eq_(self.record.registrant_contacts, [])
 
     def test_technical_contacts(self):
-        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.technical_contacts)
+        eq(self.record.technical_contacts, None)
 
     def test_updated_on(self):
-        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.updated_on)
+        eq(self.record.updated_on, None)
 
     def test_domain_id(self):
-        assert_raises(yawhois.exceptions.AttributeNotSupported, self.record.domain_id)
+        eq(self.record.domain_id, None)
 
     def test_expires_on(self):
         eq_(self.record.expires_on, None)

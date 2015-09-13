@@ -30,7 +30,7 @@
 
 
 #registrar
-  %s %CLASS{registrar}
+  %s be_a(Whois::Record::Registrar)
   %s.id == "R84-AFIN"
   %s.name == "Mark Monitor"
 

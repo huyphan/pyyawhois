@@ -47,7 +47,7 @@ class Record(object):
     PROPERTIES = [
         'disclaimer',
         'domain', 'domain_id',
-        'status', 'available', 'registered',
+        'status', 'available', 'registered', 'reserved',
         'created_on', 'updated_on', 'expires_on',
         'registrar',
         'registrant_contacts', 'admin_contacts', 'technical_contacts',

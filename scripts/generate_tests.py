@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import sys
 import os
 import glob
@@ -108,6 +110,23 @@ def generate_tests(source_path):
                 tests[prop].append(test_line)
                 continue
 
+            match = re.compile("^be_a\((.+)\)$").match(condition)
+            if match:
+                type_to_test = build_condition_typeof(match.group(1))
+                test_line    = "eq_(%s.__class__.__name__, '%s')" % (left_side, type_to_test)
+                tests[prop].append(test_line)
+                continue
+
+            if condition == "be_nil":
+                test_line = "eq(%s, None)" % left_side
+                tests[prop].append(test_line)
+                continue
+
+            if condition == "raise_error Whois::AttributeNotSupported":
+                test_line = "eq(%s, None)" % left_side
+                tests[prop].append(test_line)
+                continue                
+
             raise Exception("Invalid line '%s' in '%s'" % (line, source_path))
 
     for prop, conditions in tests.items():
@@ -151,7 +170,7 @@ def build_condition_typeof(described_class):
         return 'Contact'
     elif described_class == "nameserver":
         return 'Nameserver'
-    elif described_class == "registrar":
+    elif described_class == "registrar" or described_class == 'Whois::Record::Registrar':
         return 'Registrar'
     else:
         raise Exception("Unknown class '%s'" % described_class)
@@ -169,7 +188,6 @@ def build_condition_typeof(described_class):
 #     match = re.compile("^%CLASS\{(.+)\}$").match(c)
 #     if match:
 #         c = "be_a(%s)" % build_condition_typeof(match.group(1))
-
 
 #     match = re.compile("^%CLASS\{(.+)\}$").match(c)
 #     if match:

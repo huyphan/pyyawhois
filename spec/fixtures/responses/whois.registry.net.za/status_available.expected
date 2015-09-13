@@ -6,7 +6,7 @@
   %s == nil
 
 #domain_id
-  %s %ERROR{AttributeNotSupported}
+  %s raise_error Whois::AttributeNotSupported
 
 
 #status
@@ -23,7 +23,7 @@
   %s == nil
 
 #updated_on
-  %s %ERROR{AttributeNotSupported}
+  %s raise_error Whois::AttributeNotSupported
 
 #expires_on
   %s == nil
@@ -37,10 +37,11 @@
   %s == []
 
 #admin_contacts
-  %s %ERROR{AttributeNotSupported}
+  %s raise_error Whois::AttributeNotSupported
 
 #technical_contacts
-  %s %ERROR{AttributeNotSupported}
+  %s raise_error Whois::AttributeNotSupported
+
 
 #nameservers
   %s == []

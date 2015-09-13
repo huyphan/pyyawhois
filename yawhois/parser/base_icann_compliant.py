@@ -90,7 +90,7 @@ class BaseIcannCompliantParser(ScannableParserBase):
             })
 
     def _value_for_phone_property(self, element, prop):
-        return " ext: ".join(filter(None,[value_for_property(element, prop), value_for_property(element, prop + " Ext")] ))
+        return " ext: ".join(filter(None,[self._value_for_property(element, prop), self._value_for_property(element, prop + " Ext")] ))
 
     def _value_for_property(self, element, prop):
         return ", ".join(filter(None, array_wrapper(self.node("%s %s" % (element, prop))))) or None

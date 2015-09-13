@@ -51,4 +51,5 @@ class TestWhoisJprsJpNeJpStatusRegistered(object):
         eq_(self.record.updated_on, time_parse('2009-10-23 19:22:08'))
 
     def test_expires_on(self):
-        eq_(self.record.expires_on, None)
+        eq_(self.record.expires_on.__class__.__name__, 'datetime')
+        eq_(self.record.expires_on, time_parse('2010-09-30'))

@@ -22,4 +22,4 @@ class TestWhoisNicMePropertyUpdatedOnIsBlank(object):
         self.record  = yawhois.record.Record(None, [part])
 
     def test_updated_on(self):
-        eq_(self.record.updated_on, None)
+        eq(self.record.updated_on, None)
