@@ -20,19 +20,19 @@ class WhoisCiraCaParser(ScannableParserBase):
 
     @property
     def status(self):
-      match = re.search("Domain status:\s+(.+?)\n", self.content_for_scanner)
-      if match:
-          status = match.group(1)
-          if status in ['registered', 'redemption', 'auto-renew grace', 'to be released', 'pending delete']:
-              return 'registered'
-          elif status == 'available':
-              return 'available'
-          elif status == 'unavailable':
-              return 'invalid'
-          else:
-              raise ParserError("Unknown status '%s'" % status)
-      else:
-          raise ParserError("Unable to parse status")
+        match = re.search("Domain status:\s+(.+?)\n", self.content_for_scanner)
+        if match:
+            status = match.group(1)
+            if status in ['registered', 'redemption', 'auto-renew grace', 'to be released', 'pending delete']:
+                return 'registered'
+            elif status == 'available':
+                return 'available'
+            elif status == 'unavailable':
+                return 'invalid'
+            else:
+                raise ParserError("Unknown status '%s'" % status)
+        else:
+            raise ParserError("Unable to parse status")
 
     @property
     def available(self):
@@ -142,3 +142,5 @@ class WhoisCiraCaParser(ScannableParserBase):
                 'fax'          : self.node(element).get("Fax"),
                 'email'        : self.node(element).get("Email")
             })
+
+

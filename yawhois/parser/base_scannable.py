@@ -23,7 +23,6 @@ class ScannableParserBase(ParserBase):
     _ast    = None
 
     def node(self, key):
-
         if self._ast is None:
             self._ast = self.parse()
         return self._ast.get(key)

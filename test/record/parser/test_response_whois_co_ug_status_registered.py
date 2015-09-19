@@ -46,7 +46,7 @@ class TestWhoisCoUgStatusRegistered(object):
 
     def test_updated_on(self):
         eq_(self.record.updated_on.__class__.__name__, 'datetime')
-        eq_(self.record.updated_on, time_parse('2009-11-10 14:06:58 UTC'))
+        eq_(self.record.updated_on, time_parse('2009-11-10 14:06:58 +0300'))
 
     def test_expires_on(self):
         eq_(self.record.expires_on.__class__.__name__, 'datetime')
